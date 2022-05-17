@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo/estilo.css">
+</head>
+<body class="body__login">
+    <header class="header">
+        <div class="header__logo">
+            <img src="../img/logo.png">
+            <h2 class="logo__titulo"> MILAN INDUMENTARIA</h2>
+        </div>
+        <nav class="nav">
+            <ul class="menu"> 
+                <li><a href="../index.html"> HOME </a></li>
+                <li><a href="../pages/login.html"> LOGIN </a></li>
+                <li><a href="../pages/singin.html"> SING IN</a></li>
+                <li><a href="../pages/carrito.html"> CARRITO</a></li>
+                <li class="menu__indumentaria"> <a href=""> INDUMENTARIA</a> 
+                    <ul class="subMenu">
+                        <li> <a href="../pages/mujer.html"> MUJER</a> </li>
+                    </ul>
+                 </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mainLogin">
+        <h1> REGRISTRATE</h1>
+        <form class="form" action="login.html" method="get" enctype="application/x-www-form-urlencoded">
+            <div class="form__contInput">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="apellido" placeholder="Apellido" required>
+                <input type="text" name="nu" placeholder="Nombre de usuario" required>
+                <input type="email" name="em" placeholder="E-mail" required> 
+                <input type="password" name="pass" placeholder="Contraseña" required>
+                <input type="password" name="pass2" placeholder="Repetir Contraseña" required>
+            </div>
+            
+            <select name="sex" required>
+                <option disabled selected value="">Seleccione el Sexo</option>
+                <option>Hombre</option>
+                <option>Mujer</option>
+                <option>No binario</option>
+            </select>
+            <textarea disabled cols="30" rows="10">El acceso a los Servicios Digitales es libre y gratuito. El Usuario garantiza y declara ser mayor de 18 años, y/o en su caso, que tiene la expresa autorización de sus padres o de sus tutores para poder acceder al sitio 
+                web y que es competente para entender y aceptar sin reservas las obligaciones, afirmaciones, representaciones 
+                y garantías establecidas en estos Términos y Condiciones. Por su parte, el Estado Nacional, en adelante “el 
+                Administrador”, deslinda su responsabilidad en el caso de no ser veraz la información suministrada al respecto.
+            </textarea>
+            <div class="form__checkbox">
+                <input type="checkbox" required> <label class="form__checkbox--texto"> Acepto Terminos y Condiciones</label>
+            </div>
+            <div class="form__botones">
+                <input type="submit" value="Registrar">
+                <input type="reset" value="Cancelar">
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <h2> © 2022 Milan Indumentaria. Reservados todos los derechos.</h2>
+        <div class="footer__contenedorImagenes">
+            <img src="../img/face.png">
+            <img src="../img/instagram.png"></li>
+            <img src="../img/twt.png"></li>
+         </div>  
+    </footer>
+</body>
+</html>

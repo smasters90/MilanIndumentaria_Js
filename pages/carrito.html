@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo/estilo.css">
+    <title>Carrito</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="../img/logo.png">
+            <h2 class="logo__titulo"> MILAN INDUMENTARIA</h2>
+        </div>
+        <nav class="nav">
+            <ul class="menu"> 
+                <li><a href="../index.html"> HOME </a></li>
+                <li><a href="../pages/login.html"> LOGIN </a></li>
+                <li><a href="../pages/singin.html"> SING IN</a></li>
+                <li><a href="../pages/carrito.html"> CARRITO</a></li>
+                <li class="menu__indumentaria"> <a href=""> INDUMENTARIA</a> 
+                    <ul class="subMenu">
+                        <li> <a href="../pages/mujer.html"> MUJER</a> </li>
+                    </ul>
+                 </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mainCarrito">
+        <h1> CARRITO DE COMPRAS</h1>
+        <form class="formCarrito" action="carrito.html" method="get" enctype="application/x-www-form-urlencoded">
+            <table class="formCarrito__table" border="1">
+                <tr>
+                    <th><strong>Producto</strong>  </th>
+                    <th><strong>Cantidad</strong>  </th>
+                    <th><strong>Precio x Unidad</strong></th>
+                    <th><strong>Total</strong>  </th>
+                </tr>
+                <tr>
+                    <td > 
+                        <select>
+                            <option value="" selected disabled>--Seleccione Producto--</option>
+                            <option>Pantalo de Jean</option>
+                            <option>Remera basica</option>
+                            <option>Mini top</option>
+                        </select>
+                    </td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td > 
+                        <select>
+                            <option value="" selected disabled>--Seleccione Producto--</option>
+                            <option>Pantalo de Jean</option>
+                            <option>Remera basica</option>
+                            <option>Mini top</option>
+                        </select>
+                    </td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+            </table>
+            <input class= "formCarrito__boton" type="submit" value="Pagar">
+            <input class= "formCarrito__boton" type="reset" value="Seguir Comprando">
+            <input class= "formCarrito__boton" type="reset" value="Cancelar">
+        </form>
+    </main>
+
+    <footer class="footer">
+        <h2> © 2022 Milan Indumentaria. Reservados todos los derechos.</h2>
+        <div class="footer__contenedorImagenes">
+            <img src="../img/face.png">
+            <img src="../img/instagram.png"></li>
+            <img src="../img/twt.png"></li>
+         </div>  
+    </footer>
+</body>
+</html>

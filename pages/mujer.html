@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo/estilo.css">
+    <title>Mujer</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="../img/logo.png">
+            <h2 class="logo__titulo"> MILAN INDUMENTARIA</h2>
+        </div>
+        <nav class="nav">
+            <ul class="menu"> 
+                <li><a href="../index.html"> HOME </a></li>
+                <li><a href="../pages/login.html"> LOGIN </a></li>
+                <li><a href="../pages/singin.html"> SING IN</a></li>
+                <li><a href="../pages/carrito.html"> CARRITO</a></li>
+                <li class="menu__indumentaria"> <a href=""> INDUMENTARIA</a> 
+                    <ul class="subMenu">
+                        <li> <a href="../pages/mujer.html"> MUJER</a> </li>
+                    </ul>
+                 </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mainMujer">
+        <h1> Indumentaria Mujer</h1>
+        <img src="../img/pantalovestirmujer.png" class="imagenCompra">
+
+        <form class="formIndumentaria" action="mujer.html" method="get" enctype="application/x-www-form-urlencoded">
+            <div class="formIndumentaria__compra">
+                <h2 class="compra__nombre"> Palazo Afra</h2>
+                <h3 class="compra__precio"> $ 6.050</h3>
+                <span class="compra__descuento">6 cuotas sin interés de $1.008,33</span>
+                <span class="compra__porcentaje">10% de descuento pagando con Transferencia Bancaria</span>
+                <div class="compra__color">
+                    <label for="color" class="color__nombre">Color</label>
+                    <select name="" id="color">
+                        <option value="" selected disabled>--Seleccione Color--</option>
+                        <option value="gris">GRIS</option>
+                        <option value="negro">NEGRO</option>
+                    </select>
+                </div>
+                <div class="compra__talle">
+                    <label for="talle" class="talle__nombre"> Talle</label>
+                    <select name="" id="talle">
+                        <option value="" selected disabled>--Seleccione Talle--</option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                </div>
+                <div class="compra__cantidad">
+                    <label for="cantidad" class="cantidad__nombre">Cantidad</label>
+                    <input type="number" class="cantidad__numero">
+                </div>
+            </div>
+            <input type="submit" value="AGREGAR AL CARRITO" class="formIndumentaria__agregar">
+        </form>
+    </main>
+
+    <footer class="footer">
+        <h2> © 2022 Milan Indumentaria. Reservados todos los derechos.</h2>
+        <div class="footer__contenedorImagenes">
+            <img src="../img/face.png">
+            <img src="../img/instagram.png"></li>
+            <img src="../img/twt.png"></li>
+         </div>  
+    </footer>
+    
+    
+</body>
+</html>

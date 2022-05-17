@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Permanent+Marker&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+
+
+.header__logo{  
+    font-family: 'Square Peg', cursive;
+}
+
+.enlace {
+  text-decoration: none;
+  font-family: 'Square Peg', cursive;
+  font-size: 20px;
+  color: rgba(230, 228, 228, 0.89);
+  list-style-type: none;
+  transition: 0.7s;
+}
+
+.enlace:hover{
+  border-bottom: 1px solid white;
+  font-size: 25px;
+  color: rgba(236, 154, 87, 0.945);
+}
+
+.menu {
+  list-style-type: none;
+  font-size: 0;
+}
+
+
+
+@media all and (min-width:768px) {
+  .footer__contenedorImagenes img {
+    width: 5%;
+  }
+
+  .temporada__contenedorImg img{
+    border: 2px solid black;
+    margin: 10px 0px;
+    cursor:pointer;
+  }
+  
+  .temporada__contenedorImg img:hover{
+    transform: scale(1.1, 1.1);
+    }
+  }
+}
+
+@media all and (min-width:1200px){
+  #navbarToggleExternalContent{
+    display: inline;
+  }
+}
+
+
