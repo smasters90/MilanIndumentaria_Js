@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Permanent+Marker&family=Square+Peg&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
 
-
+/*HEADER*/
 .header__logo{  
     font-family: 'Square Peg', cursive;
 }
@@ -28,7 +28,7 @@
   font-size: 0;
 }
 
-
+/*INDEX*/
 
 @media all and (min-width:768px) {
   .footer__contenedorImagenes img {
@@ -45,7 +45,7 @@
     transform: scale(1.1, 1.1);
     }
   }
-}
+
 
 @media all and (min-width:1200px){
   #navbarToggleExternalContent{
@@ -53,4 +53,25 @@
   }
 }
 
+/*LOGIN*/
+.mainLogin{
+  background: rgb(246,144,100);
+  background: linear-gradient(rgba(246,144,100,1) 34%, rgba(235,158,58,0.9108018207282913) 100%);
+}
+
+.form__botones input {
+  font-family: 'Inconsolata', monospace;
+  cursor: pointer;
+  border-style: solid;
+  background-color:rgb(112, 161, 206);
+  transition: 0.6s;
+}
+
+.form__botones input:hover{
+  transform: scale(1.1, 1.1);
+}
+
+.form__botones input:active{
+  transform: scaleZ(1.1);
+}
 
