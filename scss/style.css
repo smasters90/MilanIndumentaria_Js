@@ -121,4 +121,19 @@
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
 }
+
+.contButton {
+  right: 10px;
+}
+
+.contButton .button__shop {
+  border: 3px solid black;
+  border-radius: 30%;
+  cursor: pointer;
+  background-color: rgba(202, 202, 202, 0.966);
+}
+
+.contButton .button__shop i {
+  color: white;
+}
 /*# sourceMappingURL=style.css.map */
