@@ -1,0 +1,12 @@
+
+%form{
+    font-weight: 900;
+    font-family: 'Inconsolata', monospace;
+    cursor: pointer;
+}
+
+@mixin boton($border, $bgcolor, $transition){
+    border: $border;
+    background-color: $bgcolor;
+    transition: $transition;
+}
