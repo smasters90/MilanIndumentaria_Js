@@ -4,59 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../scss/style.css">
      
     <title>Sing In</title>
+
 </head>
+
 <body>
-    <header class="header">
-        <div class="header__logo">
-            <img src="../img/logo.png">
-            <h2 class="logo__titulo"> MILAN INDUMENTARIA</h2>
+    <header class="header d-flex flex-column align-items-center bg-secondary flex-xl-row" >
+        <div class="header__logo d-flex flex-column align-items-center">
+            <img src="../img/logo.png" class="col-8 mx-auto pb-2 align-items-center col-md-6">
+            <h2 class="logo__titulo text-center px-4 w-50"> MILAN INDUMENTARIA</h2>
         </div>
-        <nav class="nav">
-            <ul class="menu"> 
-                <li><a href="../index.html"> HOME </a></li>
-                <li><a href="../pages/login.html"> LOGIN </a></li>
-                <li><a href="../pages/singin.html"> SING IN</a></li>
-                <li><a href="../pages/carrito.html"> CARRITO</a></li>
-                <li class="menu__indumentaria"> <a href=""> INDUMENTARIA</a> 
-                    <ul class="subMenu">
-                        <li> <a href="../pages/mujer.html"> MUJER</a> </li>
-                    </ul>
-                 </li>
-            </ul>
+        <nav class="nav navbar-dark bg-dark mx-auto mb-2">
+            <div class="container-fluid d-xl-none">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
         </nav>
+            <div class="collapse  w-100 " id="navbarToggleExternalContent">
+                    <div class="list-group align-items-center  bg-dark p-4 flex-xl-row justify-content-xl-evenly">
+                        <a class="enlace fw-bold" href="../index.html"> HOME </a>
+                        <a class="enlace fw-bold" href="../pages/login.html"> LOGIN </a>
+                        <a class="enlace fw-bold" href="../pages/singin.html"> SING IN</a>
+                        <a class="enlace fw-bold" href="../pages/carrito.html"> CARRITO</a></li>
+                        <a class="enlace fw-bold" href="../pages/mujer.html"> INDUMENTARIA</a> 
+                      
+                    </div>
+                </div>
+            </div>
     </header>
 
-    <main class="mainSingIn">
-        <h1> INICIAR SESION</h1>
-        <form class="formSingIn">
-            <div class="form__contInput">
-                <input type="text" placeholder="Nombre de Usuario" required>
-                <input type="password" placeholder="Password"required>
+    <main class="mainSingIn d-flex flex-column align-items-center">
+        <h1 class="d-block p-2"> INICIAR SESION</h1>
+        <form class="formSingIn form d-flex flex-column align-items-center justify-content-evenly gap-3 border border-2 border-dark p-4 m-1 col-11 col-xl-5 col-md-8">
+            <div class="form__contInput d-flex flex-column align-items-center col-12 justify-content-evenly gap-3 p-2 my-2">
+                <input class="col-10 col-md-5" type="text" placeholder="Nombre de Usuario" required>
+                <input class="col-10 col-md-5 " type="password" placeholder="Password"required>
             </div>
             
             <div class="form__checkbox">
                 <input type="checkbox"> Recodar contraseña
             </div>
             
-            <div class="form__botones">
-                <input type="submit" value="Entrar">
-                <input type="reset" value="Cancelar">
+            <div class="form__botones d-flex flex-row justify-content-around col-8 col-md-5 col-xl-5">
+                <input class="d-inline p-1 my-1  rounded-3" type="submit" value="SING IN">
+                <input class="d-inline p-1 my-1  rounded-3" type="reset" value="REGISTRATE" onclick="location.href='../pages/login.html'">
             </div>
 
         </form>
     </main>
 
-    <footer class="footer">
-        <h2> © 2022 Milan Indumentaria. Reservados todos los derechos.</h2>
-        <div class="footer__contenedorImagenes">
-            <img src="../img/face.png">
-            <img src="../img/instagram.png">
-            <img src="../img/twt.png">
+    <footer class="footer d-flex flex-column bg-secondary p-2 flex-xl-row justify-content-xl-around">
+        <h6 class="text-white text-center"> © 2022 Milan Indumentaria. Reservados todos los derechos.</h6>
+        <div class="footer__contenedorImagenes d-flex flex-row justify-content-evenly col-xl-6 justify-content-xl-end gap-xl-5">
+            <img class="img-fluid col-1" src="../img/face.png">
+            <img class="img-fluid col-1" src="../img/instagram.png">
+            <img class="img-fluid col-1" src="../img/twt.png">
          </div>  
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
    
 </body>
 </html>

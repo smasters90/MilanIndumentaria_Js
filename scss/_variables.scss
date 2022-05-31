@@ -10,3 +10,14 @@
     background-color: $bgcolor;
     transition: $transition;
 }
+
+$colores:(
+    gris: rgba(230, 228, 228, 0.89),
+    blanco: rgb(255,255,255),
+    naranja: rgba(236, 154, 87, 0.945),
+    negro: rgb(0,0,0),
+    naranja-grandiente: rgba(235,158,58,0.9108018207282913),
+    celeste: rgb(112, 161, 206),
+    grisClaro: rgba(230, 228, 228, 0.89)
+
+);

@@ -11,12 +11,12 @@
     text-decoration: none;
     font-family: 'Square Peg', cursive;
     font-size: 20px;
-    color: rgba(230, 228, 228, 0.89);
+    color: map-get($colores, gris);
     list-style-type: none;
     transition: 0.7s;
 
     &:hover{
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid map-get($colores, blanco);
         font-size: 25px;
         color: rgba(236, 154, 87, 0.945);
     }
@@ -35,14 +35,13 @@
     }
   
     .temporada__contenedorImg img{
-      border: 2px solid black;
+      border: 2px solid map-get($colores, negro);
       margin: 10px 0px;
       cursor:pointer;
       
       &:hover{
         transform: scale(1.1, 1.1);
         }
-
     }  
 }
 
@@ -54,13 +53,14 @@
 
 /*LOGIN*/
 .mainLogin{
-    background: rgb(246,144,100);
-    background: linear-gradient(rgba(246,144,100,1) 34%, rgba(235,158,58,0.9108018207282913) 100%);
+    background: map-get($colores, naranja);
+    background: linear-gradient(rgba(246,144,100,1) 34%, map-get($colores, naranja-grandiente) 100%);
 
     .form__botones input {
         @extend %form;
 
-        @include boton (solid, rgb(112, 161, 206), 0.6s );
+        @include boton (solid, map-get($colores, celeste), 0.6s );
+        color: map-get($colores, grisClaro);
     
         &:hover{
             transform: scale(1.1, 1.1);
@@ -77,12 +77,12 @@
 .talle__boton input{
     width: 70px;
     height: 40px;
-    background-color: white;
-    border:rgba(230, 228, 228, 0.89) solid 2px;
+    background-color: map-get($colores, blanco);
+    border:map-get($colores, gris) solid 2px;
 
     &:focus{
-        background-color: black;
-        color:white;
+        background-color:map-get($colores, negro);
+        color:map-get($colores, blanco);
     }
 }
 
@@ -95,8 +95,8 @@
     
 .formIndumentaria__agregar{
     @extend %form;
-    @include boton (rgba(236, 196, 122, 0.856) solid 3px, rgb(0, 0, 0), 0.6s );
-    color: rgb(245, 245, 245);
+    @include boton(rgba(236, 196, 122, 0.856) solid 3px, map-get($colores, negro), 0.6s );
+    color: map-get($colores, blanco);
   
     &:active{
         transform: scaleZ(1.3);
@@ -107,20 +107,34 @@
     }
 }
 
-
-
 .contButton{
     right: 10px;
 
     .button__shop{
-        border: 3px solid black;
+        border: 3px solid map-get($colores, negro);
         border-radius: 30%;
         cursor: pointer;
         background-color: rgba(202, 202, 202, 0.966);
 
         i {
-            color:rgb(255, 255, 255)
+            color:map-get($colores, blanco);
         }
+    }
+}
+
+/*SING IN*/
+
+.form__botones input{
+    @extend %form;
+    @include boton (2px solid rgb(204, 80, 198), map-get($colores, negro), 0.6s );
+    color: map-get($colores, celeste);
+
+    &:active{
+        transform: scaleZ(1.3);
+    }
+
+    &:hover{
+        transform: scale(1.1, 1.1);
     }
 }
 
