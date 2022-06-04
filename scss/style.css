@@ -158,4 +158,56 @@
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
 }
+
+/*FOOTER*/
+.footer__cont--img a img {
+  cursor: pointer;
+}
+
+.footer__cont--img a img:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+/*CONTACTO*/
+.mainCarrito h1 {
+  font-size: 50px;
+}
+
+.mainCarrito .carrito__cont--info {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.mainCarrito .carrito__cont--info:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.formContacto__contenedor input {
+  outline: none;
+  border: solid 1px rgba(196, 194, 194, 0.596);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.formContacto__contenedor input:focus {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  border-color: rgba(49, 49, 49, 0.74);
+}
+
+.formContacto__contenedor textarea {
+  outline: none;
+  border: solid 1px rgba(196, 194, 194, 0.596);
+  resize: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.formContacto__contenedor textarea:focus {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  border-color: rgba(49, 49, 49, 0.74);
+}
 /*# sourceMappingURL=style.css.map */

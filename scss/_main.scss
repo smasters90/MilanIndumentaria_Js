@@ -60,7 +60,7 @@
         @extend %form;
 
         @include boton (solid, map-get($colores, celeste), 0.6s );
-        color: map-get($colores, grisClaro);
+        color: map-get($colores, gris);
     
         &:hover{
             transform: scale(1.1, 1.1);
@@ -122,6 +122,8 @@
     }
 }
 
+
+
 /*SING IN*/
 
 .form__botones input{
@@ -138,4 +140,54 @@
     }
 }
 
-  
+/*FOOTER*/
+
+.footer__cont--img{
+     a{
+        img {
+           cursor: pointer;
+           &:hover{
+            transform: scale(1.1, 1.1);
+        }
+        }
+    }
+
+    
+}
+
+/*CONTACTO*/
+
+.mainCarrito{
+    h1{
+        font-size: 50px;
+    }
+    .carrito__cont--info{
+        transition: 1s;
+        &:hover{
+             transform: scale(1.1, 1.1);
+        }   
+    }
+}
+
+.formContacto__contenedor{
+    input{
+        outline: none;
+        border: solid 1px map-get($colores, grisClaro);
+        transition:1s;
+        &:focus{
+            transform: scale(1.1, 1.1);
+            border-color: rgba(49, 49, 49, 0.74);
+        }
+    }
+    textarea{
+        outline: none;
+        border: solid 1px map-get($colores, grisClaro);
+        resize: none;
+        transition:1s;
+        &:focus{
+            transform: scale(1.1, 1.1);
+            border-color: rgba(49, 49, 49, 0.74);
+        }
+    }
+    
+}
