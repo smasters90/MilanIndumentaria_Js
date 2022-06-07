@@ -6,10 +6,15 @@
 
 .header{
     background-color: rgb(228, 180, 109);
+    .header__logo{  
+        font-family: 'EB Garamond', serif;
+        h2 .kids{
+            color: rgb(228, 61, 200);
+            font-weight: 900;
+        }
+    }
   }
-.header__logo{  
-    font-family: 'EB Garamond', serif;
-}
+
 
 .enlace {
     text-decoration: none;
@@ -42,7 +47,7 @@
            cursor: pointer;
            &:hover{
             transform: scale(1.1, 1.1);
-        }
+            }
         }
     }
 
@@ -82,29 +87,23 @@
     }
 }
 
-/*LOGIN*/
+/*NIÑAS*/
 
-.mainLogin{
-    background: map-get($colores, naranja);
-    background: linear-gradient(rgb(136, 154, 172) 34%, map-get($colores, blanco) 100%);
-
-    font-family: 'EB Garamond', serif;
-
-    .form__botones input {
-        @extend %form;
-
-        @include boton (solid, map-get($colores, celeste), 0.6s );
-        color: map-get($colores, gris);
-    
+.cont__btn{
+    button{
+        border-radius: 20%;
+        transition: .3s;
         &:hover{
             transform: scale(1.1, 1.1);
         }
-    
-        &:active{
-            transform: scaleZ(1.1);
+        span{
+            font-size: 30px;
+            color: map-get($colores, btn_añadir);
         }
     }
 }
+
+
 
   /*MUJER*/
 
@@ -158,9 +157,14 @@
             }
         }
     }
+
+    #carrito{
+        width: 75%;
+        height: 90%;
+        top: 2.5%;
+        left: 12.5%
+    }
 }
-
-
 
 
 /*SING IN*/
@@ -239,7 +243,6 @@
     cursor:pointer
 
   }
-
 
   .fotmContacto__boton:hover{
             

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../scss/style.css">
+
+    <title>NIÑAS</title>
+
+</head>
+
+<body>
+    <header class="header d-flex flex-column align-items-center flex-xl-row" >
+        <div class="header__logo d-flex flex-column align-items-center">
+            <img src="../img/logo.png" class="col-8 mx-auto pb-2 align-items-center col-md-6">
+            <h2 class="logo__titulo  px-4 w-50"> MILAN INDUMENTARIA <span class="kids">GIRLS</span></h2>
+        </div>
+        <nav class="nav navbar-dark bg-dark mx-auto mb-2">
+            <div class="container-fluid d-xl-none">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+            <div class="collapse  w-100 " id="navbarToggleExternalContent">
+                    <div class="list-group align-items-center  bg-dark p-4 flex-xl-row justify-content-xl-evenly">
+                        <a class="enlace fw-bold" href="../index.html"> HOME </a>
+                        <a class="enlace fw-bold" href="../pages/singin.html"> SING IN</a>
+                        <a class="enlace fw-bold" href="../pages/mujer.html"> MUJER</a> 
+                        <a class="enlace fw-bold" href="../pages/niñas.html"> NIÑAS </a>
+                        <a class="enlace fw-bold" href="../pages/contacto.html"> CONTACTO</a>                     
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <section>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="carrito" aria-labelledby="offcanvasLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasLabel">TU CARITO</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              ...
+            </div>
+          </div>
+        <img class="col-12" src="../img/fondoNiñas.jpeg" alt="">
+        <nav aria-label="breadcrumb" class="d-flex flex-column align-items-center">
+            <ol class="breadcrumb mt-3 d-flex">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Niñas</li>
+            </ol>
+        </nav>
+        <div class="d-flex flex-row align-items-center justify-content-around col-12 mt-2">
+            <div class="contenedor__producto d-flex flex-column col-8 col-xl-2 align-items-center">
+                <div class="cont__btn d-flex flex-column border border-success p-1 align-items-center">
+                    <img class="img-fluid" src="../img/calzaIndigo.jpg">
+                    <button class="btn__agregar rounded-circule m-3 d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="offcanvasRight"><span>+</span></button>
+                </div>
+                <p class="contenedorImg__descripcion fw-bold">CALZA INDIGO</p>
+                <p class="contenedorImg__precio">$699,00</p>
+                <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$116,50</span></p>
+            </div>
+            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-2 align-items-center">
+                <div class="cont__btn d-flex flex-column border border-success p-1 align-items-center">
+                    <img class="img-fluid" src="../img/monoPerla.jpg">
+                    <button class="btn__agregar rounded-circule m-3 d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="offcanvasRight"><span>+</span></button>
+                </div>
+                <p class="contenedorImg__descripcion fw-bold">MONO PERLA</p>
+                <p class="contenedorImg__precio">$1.129,00</p>
+                <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$188,17</span></p>
+            </div>
+            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-2 align-items-center">
+                <div class="cont__btn d-flex flex-column border border-success p-1 align-items-center">
+                    <img class="img-fluid" src="../img/remeraPerla.jpg">
+                    <button class="btn__agregar rounded-circule m-3 d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="offcanvasRight"><span>+</span></button>
+                </div>
+                <p class="contenedorImg__descripcion fw-bold">REMERA PERLA</p>
+                <p class="contenedorImg__precio">$2.449,00</p>
+                <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$408,17</span></p>
+            </div>
+            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-2 align-items-center">
+                <div class="cont__btn d-flex flex-column border border-success p-1 align-items-center">
+                    <img class="img-fluid" src="../img/shortWood.jpg">
+                    <button class="btn__agregar rounded-circule m-3 d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="offcanvasRight"><span>+</span></button>
+                </div>
+                <p class="contenedorImg__descripcion fw-bold">SHORT WOOD</p>
+                <p class="contenedorImg__precio">$999,00</p>
+                <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$166,50</span></p>
+            </div>
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-around col-12 mt-2">
+            <div class="contenedor__producto d-flex flex-column col-8 col-xl-2 align-items-center">
+                <div class="cont__btn d-flex flex-column border border-success p-1 align-items-center">
+                    <img class="img-fluid" src="../img/shortJenny.jpg">
+                    <button class="btn__agregar rounded-circule m-3 d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="offcanvasRight"><span>+</span></button>
+                </div>
+                <p class="contenedorImg__descripcion fw-bold">SHORT JENNY</p>
+                <p class="contenedorImg__precio">$1799,00</p>
+                <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$299,83</span></p>
+            </div>
+            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-2 align-items-center">
+                <div class="cont__btn d-flex flex-column border border-success p-1 align-items-center">
+                    <img class="img-fluid" src="../img//shortMonet.jpg">
+                    <button class="btn__agregar rounded-circule m-3 d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="offcanvasRight"><span>+</span></button>
+                </div>
+                <p class="contenedorImg__descripcion fw-bold">SHORT MONET</p>
+                <p class="contenedorImg__precio">$1.079,00</p>
+                <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$179,83</span></p>
+            </div>
+            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-2 align-items-center">
+                <div class="cont__btn d-flex flex-column border border-success p-1 align-items-center">
+                    <img class="img-fluid" src="../img/shortGuanacaste.jpg">
+                    <button class="btn__agregar rounded-circule m-3 d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="offcanvasRight"><span>+</span></button>
+                </div>
+                <p class="contenedorImg__descripcion fw-bold">SHORT GUANACASTE</p>
+                <p class="contenedorImg__precio">$1.079,00</p>
+                <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$179,83</span></p>
+            </div>
+            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-2 align-items-center">
+                <div class="cont__btn d-flex flex-column border border-success p-1 align-items-center">
+                    <img class="img-fluid" src="../img/shortWood.jpg">
+                    <button class="btn__agregar rounded-circule m-3 d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="offcanvasRight"><span>+</span></button>
+                </div>
+                <p class="contenedorImg__descripcion fw-bold">SHORT LILA</p>
+                <p class="contenedorImg__precio">$1.299,00</p>
+                <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$216,50</span></p>
+            </div>
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-around col-12 mt-2">
+            <div class="contenedor__producto d-flex flex-column col-8 col-xl-2 align-items-center">
+                <div class="cont__btn d-flex flex-column border border-success p-1 align-items-center">
+                    <img class="img-fluid" src="../img/joggingLondres.jpg">
+                    <button class="btn__agregar rounded-circule m-3 d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="offcanvasRight"><span>+</span></button>
+                </div>
+                <p class="contenedorImg__descripcion fw-bold">JOGGING LONDRES</p>
+                <p class="contenedorImg__precio">$1289,00</p>
+                <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$214.83</span></p>
+            </div>
+            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-2 align-items-center">
+                <div class="cont__btn d-flex flex-column border border-success p-1 align-items-center">
+                    <img class="img-fluid" src="../img/jeanMartina.jpg">
+                    <button class="btn__agregar rounded-circule m-3 d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="offcanvasRight"><span>+</span></button>
+                </div>
+                <p class="contenedorImg__descripcion fw-bold">JEAN MARTINA</p>
+                <p class="contenedorImg__precio">$2.149,00</p>
+                <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$358,17</span></p>
+            </div>
+            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-2 align-items-center">
+                <div class="cont__btn d-flex flex-column border border-success p-1 align-items-center">
+                    <img class="img-fluid" src="../img/remeraPerla.jpg">
+                    <button class="btn__agregar rounded-circule m-3 d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="offcanvasRight"><span>+</span></button>
+                </div>
+                <p class="contenedorImg__descripcion fw-bold">CALZA HANNA</p>
+                <p class="contenedorImg__precio">$999,00</p>
+                <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$166,50</span></p>
+            </div>
+            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-2 align-items-center">
+                <div class="cont__btn d-flex flex-column border border-success p-1 align-items-center">
+                    <img class="img-fluid" src="../img/shortWood.jpg">
+                    <button class="btn__agregar rounded-circule m-3 d-flex align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="offcanvasRight"><span>+</span></button>
+                </div>
+                <p class="contenedorImg__descripcion fw-bold">JEAN FLORENCE</p>
+                <p class="contenedorImg__precio">$1.899,00</p>
+                <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$316,50</span></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer d-flex flex-column p-2 flex-xl-row justify-content-xl-between align-items-center">
+        <h6 class="text-white text-center"> © 2022 Milan Indumentaria. Reservados todos los derechos.</h6>
+        <div class="footer__cont--img d-flex flex-row col-10 align-items-center justify-content-center gap-5 col-lg-6 col-md-6 col-xl-4  justify-content-xl-end pe-xl-4">
+            <a href="https://www.facebook.com/" class="col-1" target="_blank"><img class="img-fluid" src="../img/face.png"></a>
+            <a href="https://www.instagram.com/" target="_blank" class="col-1"><img class="img-fluid" src="../img/instagram.png"></a>
+            <a href="https://www.twitter.com/" target="_blank" class="col-1"><img class="img-fluid" src="../img/twt.png"></a>
+         </div>  
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

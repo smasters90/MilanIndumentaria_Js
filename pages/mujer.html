@@ -29,11 +29,10 @@
             <div class="collapse  w-100 " id="navbarToggleExternalContent">
                     <div class="list-group align-items-center  bg-dark p-4 flex-xl-row justify-content-xl-evenly">
                         <a class="enlace fw-bold" href="../index.html"> HOME </a>
-                        <a class="enlace fw-bold" href="../pages/login.html"> LOGIN </a>
                         <a class="enlace fw-bold" href="../pages/singin.html"> SING IN</a>
-                        <a class="enlace fw-bold" href="../pages/carrito.html"> CONTACTO</a></li>
-                        <a class="enlace fw-bold" href="../pages/mujer.html"> INDUMENTARIA</a> 
-                      
+                        <a class="enlace fw-bold" href="../pages/mujer.html"> MUJER</a> 
+                        <a class="enlace fw-bold" href="../pages/niñas.html"> NIÑAS </a>
+                        <a class="enlace fw-bold" href="../pages/contacto.html"> CONTACTO</a> 
                     </div>
                 </div>
             </div>
@@ -49,20 +48,19 @@
         
         <div class="contButton d-inline-block position-fixed">
             <div class="d-flex flex-row col-12 justify-content-end">
-                <button class=" button__shop" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <span class="fs-1 p-2" ><i class="bi bi-bag-check"></i></span> </button>
+                <button class=" button__shop" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="carrito"> <span class="fs-1 p-2" ><i class="bi bi-bag-check"></i></span> </button>
             </div>
         </div>
         
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="carrito" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasRightLabel">TU CARRITO</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                ...
+                <span>HAS AÑADIDO EL PRODUCTO CORRECTAMENTE</span>
             </div>
         </div>
-
         <div class="d-flex flex-column flex-xl-row align-items-center p-lg-3">
             <div class="m-1 col-10 border border-3 border-dark col-lg-5">
                 <img src="../img/pantalovestirmujer.png" class="imagenCompra img-fluid w-100">
@@ -105,21 +103,9 @@
                                 <span class="compra__porcentaje">10% de descuento pagando con Transferencia Bancaria</span>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="d-flex justify-content-center">
-                        
-                        <button class="formIndumentaria__agregar m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">AGREGAR AL CARRITO</button>
-
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                ...
-                            </div>
-                        </div>
+                    </div>       
+                    <div class="d-flex justify-content-center">     
+                        <button class="formIndumentaria__agregar m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="carrito">AGREGAR AL CARRITO</button>
                     </div> 
                 </form>
             </div>
@@ -168,16 +154,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button class="formIndumentaria__agregar m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">AGREGAR AL CARRITO</button>
-                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                ...
-                            </div>
-                        </div>
+                        <button class="formIndumentaria__agregar m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="carrito">AGREGAR AL CARRITO</button>
                     </div> 
                 </form>
             </div>
