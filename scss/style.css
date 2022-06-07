@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Square+Peg&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Permanent+Marker&family=Square+Peg&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap");
-.mainLogin .form__botones input, .formIndumentaria__agregar, .form__botones input {
+.mainLogin .form__botones input, .form--Indumentaria .formIndumentaria__agregar, .mainSingIn .form__botones input {
   font-weight: 900;
   font-family: 'Inconsolata', monospace;
   cursor: pointer;
@@ -14,15 +14,19 @@
 }
 
 /*HEADER*/
+.header {
+  background-color: #e4b46d;
+}
+
 .header__logo {
-  font-family: 'Square Peg', cursive;
+  font-family: 'EB Garamond', serif;
 }
 
 .enlace {
   text-decoration: none;
-  font-family: 'Square Peg', cursive;
+  font-family: 'EB Garamond', serif;
   font-size: 20px;
-  color: rgba(230, 228, 228, 0.89);
+  color: rgba(196, 194, 194, 0.596);
   list-style-type: none;
   -webkit-transition: 0.7s;
   transition: 0.7s;
@@ -39,7 +43,30 @@
   font-size: 0;
 }
 
+/*FOOTER*/
+.footer {
+  background-color: #e4b46d;
+}
+
+.footer__cont--img a img {
+  cursor: pointer;
+}
+
+.footer__cont--img a img:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
 /*INDEX*/
+.cont__titulo {
+  background: -webkit-gradient(linear, left top, right top, from(#e4b46d), to(rgba(196, 194, 194, 0.596)));
+  background: linear-gradient(to right, #e4b46d, rgba(196, 194, 194, 0.596) 100%);
+}
+
+.cont__titulo h2 {
+  font-family: 'EB Garamond', serif;
+}
+
 @media all and (min-width: 768px) {
   .footer__contenedorImagenes img {
     width: 5%;
@@ -64,8 +91,9 @@
 /*LOGIN*/
 .mainLogin {
   background: rgba(236, 154, 87, 0.945);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(34%, #f69064), to(rgba(235, 158, 58, 0.910802)));
-  background: linear-gradient(#f69064 34%, rgba(235, 158, 58, 0.910802) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(34%, #889aac), to(white));
+  background: linear-gradient(#889aac 34%, white 100%);
+  font-family: 'EB Garamond', serif;
 }
 
 .mainLogin .form__botones input {
@@ -87,27 +115,31 @@
 }
 
 /*MUJER*/
-.talle__boton input {
+.form--Indumentaria {
+  font-family: 'EB Garamond', serif;
+}
+
+.form--Indumentaria .talle__boton input {
   width: 70px;
   height: 40px;
   background-color: white;
   border: rgba(230, 228, 228, 0.89) solid 2px;
 }
 
-.talle__boton input:focus {
+.form--Indumentaria .talle__boton input:focus {
   background-color: black;
   color: white;
 }
 
-.compra__descuento {
+.form--Indumentaria .compra__descuento {
   text-decoration: underline;
 }
 
-.compra__porcentaje {
+.form--Indumentaria .compra__porcentaje {
   text-decoration: underline;
 }
 
-.formIndumentaria__agregar {
+.form--Indumentaria .formIndumentaria__agregar {
   border: rgba(236, 196, 122, 0.856) solid 3px;
   background-color: black;
   -webkit-transition: 0.6s;
@@ -115,61 +147,59 @@
   color: white;
 }
 
-.formIndumentaria__agregar:active {
+.form--Indumentaria .formIndumentaria__agregar:active {
   -webkit-transform: scaleZ(1.3);
           transform: scaleZ(1.3);
 }
 
-.formIndumentaria__agregar:hover {
+.form--Indumentaria .formIndumentaria__agregar:hover {
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
 }
 
-.contButton {
+.form--Indumentaria .contButton {
   right: 10px;
 }
 
-.contButton .button__shop {
+.form--Indumentaria .contButton .button__shop {
   border: 3px solid black;
   border-radius: 30%;
   cursor: pointer;
   background-color: rgba(202, 202, 202, 0.966);
 }
 
-.contButton .button__shop i {
+.form--Indumentaria .contButton .button__shop i {
   color: white;
 }
 
 /*SING IN*/
-.form__botones input {
-  border: 2px solid #cc50c6;
+.mainSingIn {
+  font-family: 'EB Garamond', serif;
+}
+
+.mainSingIn .form__botones input {
+  border: 2px solid rgba(236, 196, 122, 0.856);
   background-color: black;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   color: #70a1ce;
 }
 
-.form__botones input:active {
+.mainSingIn .form__botones input:active {
   -webkit-transform: scaleZ(1.3);
           transform: scaleZ(1.3);
 }
 
-.form__botones input:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-}
-
-/*FOOTER*/
-.footer__cont--img a img {
-  cursor: pointer;
-}
-
-.footer__cont--img a img:hover {
+.mainSingIn .form__botones input:hover {
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
 }
 
 /*CONTACTO*/
+.mainCarrito {
+  font-family: 'EB Garamond', serif;
+}
+
 .mainCarrito h1 {
   font-size: 50px;
 }
@@ -209,5 +239,31 @@
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
   border-color: rgba(49, 49, 49, 0.74);
+}
+
+.fotmContacto__boton {
+  text-decoration: none;
+  display: inline-block;
+  background: #8f8f8f;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+  -webkit-box-shadow: -5px 1px 3px 0px rgba(236, 196, 122, 0.856);
+          box-shadow: -5px 1px 3px 0px rgba(236, 196, 122, 0.856);
+  border-radius: 10px 30px;
+  cursor: pointer;
+}
+
+.fotmContacto__boton:hover {
+  background: #b6bbb6;
+  color: #7e7e7e;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=style.css.map */

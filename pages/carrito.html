@@ -12,7 +12,7 @@
     <title>Contacto</title>
 </head>
 <body>
-    <header class="header d-flex flex-column align-items-center bg-secondary flex-xl-row" >
+    <header class="header d-flex flex-column align-items-center flex-xl-row" >
         <div class="header__logo d-flex flex-column align-items-center">
             <img src="../img/logo.png" class="col-8 mx-auto pb-2 align-items-center col-md-6">
             <h2 class="logo__titulo text-center px-4 w-50"> MILAN INDUMENTARIA</h2>
@@ -29,7 +29,7 @@
                         <a class="enlace fw-bold" href="../index.html"> HOME </a>
                         <a class="enlace fw-bold" href="../pages/login.html"> LOGIN </a>
                         <a class="enlace fw-bold" href="../pages/singin.html"> SING IN</a>
-                        <a class="enlace fw-bold" href="../pages/carrito.html"> CARRITO</a></li>
+                        <a class="enlace fw-bold" href="../pages/carrito.html"> CONTACTO</a></li>
                         <a class="enlace fw-bold" href="../pages/mujer.html"> INDUMENTARIA</a> 
                       
                     </div>
@@ -53,17 +53,18 @@
                 <span> +54 9 2613479655 </span>
             </a>
         </div>
-        <form class="formContacto col-10" action="carrito.html" method="get" enctype="application/x-www-form-urlencoded">
-            <div class="formContacto__contenedor d-flex flex-column">
-                <input class="m-3 rounded-4 p-1 ps-2" type="text" placeholder="Nombre">
-                <input class="m-3 rounded-4 p-1 ps-2" type="email" placeholder="Email">
-                <input class="m-3 rounded-4 p-1 ps-2" type="tel" placeholder="Telefono">
-                <textarea class="m-3 rounded-4 p-1 ps-2" name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+        <form class="formContacto d-flex  flex-column col-12 align-items-center" action="carrito.html" method="get" enctype="application/x-www-form-urlencoded">
+            <div class="formContacto__contenedor d-flex flex-column col-12 align-items-center">
+                <input class="m-3 rounded-4 p-1 ps-2 col-6 col-lg-5 col-xl-4 " type="text" placeholder="Nombre">
+                <input class="m-3 rounded-4 p-1 ps-2 col-6 col-lg-5 col-xl-4" type="email" placeholder="Email">
+                <input class="m-3 rounded-4 p-1 ps-2 col-6 col-lg-5 col-xl-4" type="tel" placeholder="Telefono">
+                <textarea class="m-3 rounded-4 p-1 ps-2 col-6 col-lg-5 col-xl-4" name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
             </div>
+            <input class="fotmContacto__boton col-3 col-lg-2 col-xl-2" value="ENVIAR"></input>
         </form>
     </main>
 
-    <footer class="footer d-flex flex-column bg-secondary p-2 flex-xl-row justify-content-xl-between align-items-center">
+    <footer class="footer d-flex flex-column p-2 flex-xl-row justify-content-xl-between align-items-center">
         <h6 class="text-white text-center"> © 2022 Milan Indumentaria. Reservados todos los derechos.</h6>
         <div class="footer__cont--img d-flex flex-row col-10 align-items-center justify-content-center gap-5 col-lg-6 col-md-6 col-xl-4  justify-content-xl-end pe-xl-4">
             <a href="https://www.facebook.com/" class="col-1" target="_blank"><img class="img-fluid" src="../img/face.png"></a>

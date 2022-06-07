@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header class="header d-flex flex-column align-items-center bg-secondary flex-xl-row" >
+    <header class="header d-flex flex-column align-items-center flex-xl-row" >
         <div class="header__logo d-flex flex-column align-items-center">
             <img src="../img/logo.png" class="col-8 mx-auto pb-2 align-items-center col-md-6">
             <h2 class="logo__titulo text-center px-4 w-50"> MILAN INDUMENTARIA</h2>
@@ -31,7 +31,7 @@
                         <a class="enlace fw-bold" href="../index.html"> HOME </a>
                         <a class="enlace fw-bold" href="../pages/login.html"> LOGIN </a>
                         <a class="enlace fw-bold" href="../pages/singin.html"> SING IN</a>
-                        <a class="enlace fw-bold" href="../pages/carrito.html"> CARRITO</a></li>
+                        <a class="enlace fw-bold" href="../pages/carrito.html"> CONTACTO</a></li>
                         <a class="enlace fw-bold" href="../pages/mujer.html"> INDUMENTARIA</a> 
                       
                     </div>
@@ -40,6 +40,12 @@
     </header>
 
     <main class="mainSingIn d-flex flex-column align-items-center">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mt-3">
+              <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">SingIn</li>
+            </ol>
+          </nav>
         <h1 class="d-block p-2"> INICIAR SESION</h1>
         <form class="formSingIn form d-flex flex-column align-items-center justify-content-evenly gap-3 border border-2 border-dark p-4 m-1 col-11 col-xl-5 col-md-8">
             <div class="form__contInput d-flex flex-column align-items-center col-12 justify-content-evenly gap-3 p-2 my-2">
@@ -59,7 +65,7 @@
         </form>
     </main>
 
-    <footer class="footer d-flex flex-column bg-secondary p-2 flex-xl-row justify-content-xl-between align-items-center">
+    <footer class="footer d-flex flex-column p-2 flex-xl-row justify-content-xl-between align-items-center">
         <h6 class="text-white text-center"> © 2022 Milan Indumentaria. Reservados todos los derechos.</h6>
         <div class="footer__cont--img d-flex flex-row col-10 align-items-center justify-content-center gap-5 col-lg-6 col-md-6 col-xl-4  justify-content-xl-end pe-xl-4">
             <a href="https://www.facebook.com/" class="col-1" target="_blank"><img class="img-fluid" src="../img/face.png"></a>
