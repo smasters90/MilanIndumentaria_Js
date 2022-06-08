@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Square+Peg&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Square+Peg&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Permanent+Marker&family=Square+Peg&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500;1,800&family=Spicy+Rice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sansita:wght@700&display=swap");
 .form--Indumentaria .formIndumentaria__agregar, .mainSingIn .form__botones input {
   font-weight: 900;
   font-family: 'Inconsolata', monospace;
@@ -95,6 +96,34 @@
 }
 
 /*NIÑAS*/
+.offcanvas {
+  font-family: 'Sansita', sans-serif;
+  color: rgba(49, 49, 49, 0.74);
+}
+
+.offcanvas .offcanvas-title {
+  color: #e43dc8;
+}
+
+.offcanvas .offcanvas-body img {
+  margin: 30px;
+}
+
+.offcanvas .offcanvas-body .cont__cantidad label {
+  margin-right: 10px;
+}
+
+.offcanvas .offcanvas-body .cont__cantidad input {
+  width: 35px;
+}
+
+.offcanvas .offcanvas-body .boton__carrito {
+  color: #e43dc8;
+  background-color: #ebebeb;
+  border: 2px solid rgba(49, 49, 49, 0.74);
+  border-radius: 35px;
+}
+
 .cont__btn button {
   border-radius: 20%;
   -webkit-transition: .3s;

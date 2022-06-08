@@ -88,6 +88,33 @@
 }
 
 /*NIÑAS*/
+.offcanvas{
+    font-family: 'Sansita', sans-serif;
+    color: map-get($colores, negro-claro);
+    .offcanvas-title{
+        color: map-get($colores, rosa);
+    }
+    .offcanvas-body{
+        img{
+            margin:30px
+        }
+        .cont__cantidad{
+            label{
+                margin-right: 10px;
+            }
+            input{
+                width: 35px;
+            }
+        }
+        .boton__carrito{
+            color: map-get($colores, rosa);
+            background-color: rgb(235, 235, 235);
+            border: 2px solid map-get($colores, negro-claro);
+            border-radius: 35px;
+        }
+    }
+}
+
 
 .cont__btn{
     button{
