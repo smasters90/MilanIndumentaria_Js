@@ -44,7 +44,52 @@
               <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
               <li class="breadcrumb-item active" aria-current="page">SingIn</li>
             </ol>
+<<<<<<< HEAD
           </nav>
+=======
+<<<<<<< HEAD
+          </nav>
+=======
+        </nav>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="registro" aria-labelledby="offcanvasLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasLabel">REGISTRATE</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column align-items-center">
+                <form class="form d-flex flex-column align-items-center justify-content-evenly gap-1 border border-2 border-dark p-2 m-2 col-12" action="login.html" method="get" enctype="application/x-www-form-urlencoded">
+                    <div class="form__contInput d-flex flex-column align-items-center col-12 justify-content-evenly gap-1">
+                        <input class="col-8" type="text" name="nombre" placeholder="Nombre" required>
+                        <input class="col-8" type="text" name="apellido" placeholder="Apellido" required>
+                        <input class="col-8" type="text" name="nu" placeholder="Nombre de usuario" required>
+                        <input class="col-8" type="email" name="em" placeholder="E-mail" required> 
+                        <input class="col-8" type="password" name="pass" placeholder="Contraseña" required>
+                        <input class="col-8" type="password" name="pass2" placeholder="Repetir Contraseña" required>
+                    </div>
+                    
+                    <select class="col-6" name="sex" required>
+                        <option disabled selected value="">Seleccione el Sexo</option>
+                        <option>Hombre</option>
+                        <option>Mujer</option>
+                        <option>No binario</option>
+                    </select>
+                    <textarea class="py-1 my-1 col-md-8" disabled cols="30" rows="5">El acceso a los Servicios Digitales es libre y gratuito. El Usuario garantiza y declara ser mayor de 18 años, y/o en su caso, que tiene la expresa autorización de sus padres o de sus tutores para poder acceder al sitio 
+                        web y que es competente para entender y aceptar sin reservas las obligaciones, afirmaciones, representaciones 
+                        y garantías establecidas en estos Términos y Condiciones. Por su parte, el Estado Nacional, en adelante “el 
+                        Administrador”, deslinda su responsabilidad en el caso de no ser veraz la información suministrada al respecto.
+                    </textarea>
+                    <div class="form__checkbox d-inline py-1 my-1">
+                        <input type="checkbox" required> <label class="form__checkbox--texto"> Acepto Terminos y Condiciones</label>
+                    </div>
+                    <div class="form__botones d-flex flex-row justify-content-around col-8">
+                        <input class="d-inline p-1 my-1 border rounded-3 fw-bold" type="submit" value="Registrar">
+                        <input class="d-inline p-1 my-1 border rounded-3 fw-bold" type="reset" value="Cancelar">
+                    </div>
+                </form> 
+            </div>
+        </div>
+>>>>>>> 748d3fa (avances)
+>>>>>>> ff0b4c8 (modificaicones actuales)
         <h1 class="d-block p-2"> INICIAR SESION</h1>
         <form class="formSingIn form d-flex flex-column align-items-center justify-content-evenly gap-3 border border-2 border-dark p-4 m-1 col-11 col-xl-5 col-md-8">
             <div class="form__contInput d-flex flex-column align-items-center col-12 justify-content-evenly gap-3 p-2 my-2">
@@ -57,8 +102,18 @@
             </div>
             
             <div class="form__botones d-flex flex-row justify-content-around col-8 col-md-5 col-xl-5">
+<<<<<<< HEAD
                 <input class="d-inline p-1 my-1  rounded-3" type="submit" value="SING IN">
                 <input class="d-inline p-1 my-1  rounded-3" type="reset" value="REGISTRATE" onclick="location.href='../pages/login.html'">
+=======
+<<<<<<< HEAD
+                <input class="d-inline p-1 my-1  rounded-3" type="submit" value="SING IN">
+                <input class="d-inline p-1 my-1  rounded-3" type="reset" value="REGISTRATE" onclick="location.href='../pages/login.html'">
+=======
+                <input class="botones__log d-inline p-1 my-1  rounded-3" type="submit" value="LOG IN">
+                <button class="botones__log d-inline rounded-3 m-3 p-1 my-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#registro" aria-controls="registro">SING IN</button>
+>>>>>>> 748d3fa (avances)
+>>>>>>> ff0b4c8 (modificaicones actuales)
             </div>
 
         </form>
