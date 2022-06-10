@@ -14,9 +14,9 @@
 
 <body>
     <header class="header d-flex flex-column align-items-center flex-xl-row" >
-        <div class="header__logo d-flex flex-column align-items-center">
-            <img src="../repo_coder/img/logo.png" class="col-8 mx-auto pb-2 align-items-center col-md-6">
-            <h2 class="logo__titulo text-center px-4 w-50"> MILAN INDUMENTARIA</h2>
+        <div class="header__logo d-flex flex-column align-items-left">
+            <img src="../repo_coder/img/logo.png" class="col-4 mx-auto pb-2 align-items-center col-md-4">
+            <h2 class="logo__titulo text-center px-4"> MILAN INDUMENTARIA</h2>
         </div>
         <nav class="nav navbar-dark bg-dark mx-auto mb-2">
             <div class="container-fluid d-xl-none">
@@ -26,7 +26,7 @@
             </div>
         </nav>
             <div class="collapse  w-100 " id="navbarToggleExternalContent">
-                    <div class="list-group align-items-center  bg-dark p-4 flex-xl-row justify-content-xl-evenly">
+                    <div class="cont__nav list-group align-items-center bg-dark p-4 flex-xl-row justify-content-xl-evenly">
                         <a class="enlace fw-bold" href="../repo_coder/index.html"> HOME </a>
                         <a class="enlace fw-bold" href="../repo_coder/pages/singin.html"> SING IN</a>
                         <a class="enlace fw-bold" href="../repo_coder/pages/mujer.html"> MUJER</a> 
@@ -38,7 +38,10 @@
     </header>
 
     <section class="mainIndex d-flex flex-column">
-        <img class="img-fluid" src="img/fondoIndex.jpg">
+        <div class="cont__fondo">
+            <img class="img-fluid" src="img/fondoIndex.png">
+            <p>25% OFF CON TARJETAS DE CREDITO EN BANCOS SELECCIONADOS!</p>
+        </div>
         <article class="novedades d-flex flex-column align-items-center">
             <div class="cont__titulo w-100 text-center my-2">
                 <h2 class="d-block"> NOVEDADES </h2>
@@ -47,7 +50,7 @@
                 <div class="novedades__contenedor carousel-inner">
                     <div class="carousel-item active">
                         <div class="d-flex flex-row align-items-center justify-content-around">
-                            <div class="contenedor__producto d-flex flex-column col-8 col-xl-3 align-items-center">
+                            <div class="contenedor__producto d-flex flex-column col-8 col-md-4 col-lg-3 col-xl-3 text-center align-items-center">
                                 <div class="border border-info p-1">
                                     <img class="img-fluid" src="img/novedades1.png">
                                 </div>
@@ -55,7 +58,7 @@
                                 <p class="contenedorImg__precio">$6.050,00</p>
                                 <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$1.008,33</span></p>
                             </div>
-                            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-3 align-items-center">
+                            <div class="contenedor__producto d-none d-xl-flex flex-column col-xl-3 align-items-center">
                                 <div class="border border-info p-1">
                                     <img class="img-fluid" src="img/buzo aspen.png">
                                 </div>
@@ -63,7 +66,7 @@
                                 <p class="contenedorImg__precio">$11.200,00</p>
                                 <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$1.866,67</span></p>
                             </div>
-                            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-3 align-items-center">
+                            <div class="contenedor__producto d-none d-xl-flex flex-column col-xl-3 align-items-center">
                                 <div class="border border-info p-1">
                                     <img class="img-fluid" src="img/topMontana.png">
                                 </div>
@@ -75,7 +78,7 @@
                     </div>
                     <div class="carousel-item">  
                         <div class="d-flex flex-row justify-content-around">
-                            <div class="contenedor__producto d-flex flex-column col-8 col-xl-3 align-items-center">
+                            <div class="contenedor__producto d-flex flex-column col-8 col-md-4 col-lg-3 col-xl-3 align-items-center text-center">
                                 <div class="border border-info p-1">
                                     <img class="img-fluid" src="img/novedades2.png">
                                 </div>
@@ -83,7 +86,7 @@
                                 <p class="contenedorImg__precio">$9.800,00</p>
                                 <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$1.633,33</span></p>
                             </div>
-                            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-3 align-items-center">
+                            <div class="contenedor__producto d-none d-xl-flex flex-column col-xl-3 align-items-center">
                                 <div class="border border-info p-1">
                                     <img class="img-fluid" src="img/camperaAkita.png">
                                 </div>
@@ -91,7 +94,7 @@
                                 <p class="contenedorImg__precio">$29.400,00</p>
                                 <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$4.900,00</span></p>
                             </div>
-                            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-3 align-items-center">
+                            <div class="contenedor__producto d-none d-xl-flex flex-column col-xl-3 align-items-center">
                                 <div class="border border-info p-1">
                                     <img class="img-fluid" src="img/vestidoDaila.png">
                                 </div>
@@ -103,7 +106,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="d-flex flex-row justify-content-around">
-                            <div class="contenedor__producto d-flex flex-column col-8 col-xl-3 align-items-center">
+                            <div class="contenedor__producto d-flex flex-column col-8 col-md-4 col-lg-3 col-xl-3 align-items-center text-center">
                                 <div class="border border-info p-1">
                                     <img class="img-fluid" src="img/novedades3.png">
                                 </div>
@@ -111,7 +114,7 @@
                                 <p class="contenedorImg__precio">$24.000,00</p>
                                 <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$4.000,00</span></p>
                             </div>
-                            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-3 align-items-center">
+                            <div class="contenedor__producto d-none d-xl-flex flex-column col-xl-3 align-items-center">
                                 <div class="border border-info p-1">
                                     <img class="img-fluid" src="img/shortSmilCuero.png">
                                 </div>
@@ -119,7 +122,7 @@
                                 <p class="contenedorImg__precio">$8.950,00</p>
                                 <p class="contenedorImg__cuotas"><span class="fw-bold">6</span> cuotas sin interes de <span class="fw-bold">$1.491,67</span></p>
                             </div>
-                            <div class="contenedor__producto d-none d-lg-flex flex-column col-xl-3 align-items-center">
+                            <div class="contenedor__producto d-none d-xl-flex flex-column col-xl-3 align-items-center">
                                 <div class="border border-info p-1">
                                     <img class="img-fluid" src="img/camperaOversize.png">
                                 </div>

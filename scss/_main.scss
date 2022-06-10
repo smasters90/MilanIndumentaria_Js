@@ -7,17 +7,26 @@
 .header{
     background-color: rgb(228, 180, 109);
     .header__logo{  
-        font-family: 'EB Garamond', serif;
+        font-family: 'Roboto', sans-serif;
         h2 .kids{
             color: rgb(228, 61, 200);
             font-weight: 900;
         }
     }
+    .logo__titulo{
+        font-size: 1.6rem;
+    }
+    @media all and (min-width:1201px){
+        .cont__nav{
+            border-top-left-radius: 35px;
+            border-bottom-left-radius: 35px;
+        }
+    } 
 }
 
 .enlace {
     text-decoration: none;
-    font-family: 'EB Garamond', serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: map-get($colores, grisClaro);
     list-style-type: none;
@@ -54,11 +63,31 @@
 
 /*INDEX*/
 
+.cont__fondo{
+    position: relative;
+    p{
+        width: 50%;
+        text-align: right;
+        font-size: 0.8rem ;
+        position: absolute;
+        top:30px;
+        right: 10px;
+        color: map-get($colores, negro-claro);
+        font-weight: 900;
 
+        @media all and (min-width:768px){
+            font-size: 1.1rem ;
+            right: 30px;
+        }
+        @media all and (min-width:1130px){
+            font-size: 1.8rem ;
+        }
+    }
+}
 .cont__titulo{
     background: linear-gradient(to right, rgb(228, 180, 109), map-get($colores, grisClaro) 100%);
     h2{
-        font-family: 'EB Garamond', serif;
+        font-family: 'Roboto', sans-serif;
     }
 }
 
@@ -142,7 +171,7 @@
   /*MUJER*/
 
 .form--Indumentaria{
-    font-family: 'EB Garamond', serif;
+    font-family: 'Roboto', sans-serif;
     .talle__boton input{
         width: 70px;
         height: 40px;
@@ -201,7 +230,7 @@
 /*SING IN*/
 
 .mainSingIn{
-    font-family: 'EB Garamond', serif;
+    font-family: 'Roboto', sans-serif;
     .botones__log{
         @extend %form;
         @include boton (2px solid rgba(236, 196, 122, 0.856), map-get($colores, negro), 0.6s );
@@ -220,7 +249,7 @@
 /*CONTACTO*/
 
 .mainCarrito{
-    font-family: 'EB Garamond', serif;
+    font-family: 'Roboto', sans-serif;
     h1{
         font-size: 50px;
     }

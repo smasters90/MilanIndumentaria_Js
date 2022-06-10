@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Square+Peg&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Square+Peg&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Permanent+Marker&family=Square+Peg&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500;1,800&family=Spicy+Rice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sansita:wght@700&display=swap");
 .form--Indumentaria .formIndumentaria__agregar, .mainSingIn .botones__log {
   font-weight: 900;
@@ -21,7 +21,7 @@
 }
 
 .header .header__logo {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .header .header__logo h2 .kids {
@@ -29,9 +29,20 @@
   font-weight: 900;
 }
 
+.header .logo__titulo {
+  font-size: 1.6rem;
+}
+
+@media all and (min-width: 1201px) {
+  .header .cont__nav {
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+  }
+}
+
 .enlace {
   text-decoration: none;
-  font-family: 'EB Garamond', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   color: rgba(196, 194, 194, 0.596);
   list-style-type: none;
@@ -65,13 +76,41 @@
 }
 
 /*INDEX*/
+.cont__fondo {
+  position: relative;
+}
+
+.cont__fondo p {
+  width: 50%;
+  text-align: right;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  color: rgba(49, 49, 49, 0.74);
+  font-weight: 900;
+}
+
+@media all and (min-width: 768px) {
+  .cont__fondo p {
+    font-size: 1.1rem;
+    right: 30px;
+  }
+}
+
+@media all and (min-width: 1130px) {
+  .cont__fondo p {
+    font-size: 1.8rem;
+  }
+}
+
 .cont__titulo {
   background: -webkit-gradient(linear, left top, right top, from(#e4b46d), to(rgba(196, 194, 194, 0.596)));
   background: linear-gradient(to right, #e4b46d, rgba(196, 194, 194, 0.596) 100%);
 }
 
 .cont__titulo h2 {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 @media all and (min-width: 768px) {
@@ -157,7 +196,7 @@
 
 /*MUJER*/
 .form--Indumentaria {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .form--Indumentaria .talle__boton input {
@@ -222,7 +261,7 @@
 
 /*SING IN*/
 .mainSingIn {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .mainSingIn .botones__log {
@@ -245,7 +284,7 @@
 
 /*CONTACTO*/
 .mainCarrito {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .mainCarrito h1 {
