@@ -91,26 +91,25 @@
     }
 }
 
+.temporada__contenedorImg img{
+    border: 2px solid map-get($colores, negro);
+    cursor:pointer;
+
+    &:hover{
+        transform: scale(1.1, 1.1);
+    }
+    &:hover{
+        transform: scale(1.1, 1.1);
+    }
+    &:hover{
+        transform: scale(1.1, 1.1);
+    } 
+}  
+
 @media all and (min-width:768px) {
     .footer__contenedorImagenes img {
       width: 5%;
-    }
-  
-    .temporada__contenedorImg img{
-        border: 2px solid map-get($colores, negro);
-        margin: 10px 0px;
-        cursor:pointer;
-    
-        &:hover{
-            transform: scale(1.1, 1.1);
-        }
-        &:hover{
-            transform: scale(1.1, 1.1);
-        }
-        &:hover{
-            transform: scale(1.1, 1.1);
-        }
-    }  
+    } 
 }
 
 @media all and (min-width:1200px){

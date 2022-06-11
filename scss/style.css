@@ -113,26 +113,29 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.temporada__contenedorImg img {
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.temporada__contenedorImg img:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.temporada__contenedorImg img:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.temporada__contenedorImg img:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
 @media all and (min-width: 768px) {
   .footer__contenedorImagenes img {
     width: 5%;
-  }
-  .temporada__contenedorImg img {
-    border: 2px solid black;
-    margin: 10px 0px;
-    cursor: pointer;
-  }
-  .temporada__contenedorImg img:hover {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
-  }
-  .temporada__contenedorImg img:hover {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
-  }
-  .temporada__contenedorImg img:hover {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
   }
 }
 

@@ -148,10 +148,32 @@
             <div class="cont__titulo w-100 text-center mb-2">
                 <h2 class="d-block"> TEMPORADA </h2>
             </div>
-            <div class="temporada__contenedorImg d-flex flex-column align-items-center gap-1 flex-xl-row">
-                <img class="img-fluid mx-auto col-11 col-xl-3" src="img/sweter.png">
-                <img class="img-fluid mx-auto col-11 col-xl-3" src="img/new in.png">
-                <img class="img-fluid mx-auto col-11 col-xl-3" src="img/t-shirt.png">
+            <div class="temporada__contenedorImg d-flex flex-column justify-content-around align-items-center  flex-xl-row py-4">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">PAGINA EN CONSTRUCCION</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                MILAN INDUMENTARIA, TODOS LOS DERECHOS RESERVADOS
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="col-10 col-xl-3 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="img-fluid" src="img/sweter.png">
+                </a> 
+                <a class="col-10 col-xl-3 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="img-fluid" src="img/new in.png">
+                </a> 
+                <a class="col-10 col-xl-3 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img class="img-fluid" src="img/t-shirt.png">
+                </a>
             </div>
         </article>
 
@@ -159,18 +181,15 @@
             <div class="cont__titulo w-100 text-center mt-2">
                 <h2 class="d-block"> SOBRE NOSOTROS </h2>
             </div>
-            <div class="nosotros__contenedorImg">
-                <img src="" alt="">
-            </div>
-            <div class="nosotros__text d-flex p-2 align-items-center justify-content-around">
-                <p class="p-2 col-5"> Milan indumentaria es una marca argentina que acompaña la dinamica de la vida
+            <div class="nosotros__text d-flex flex-column flex-xl-row p-2 align-items-center justify-content-around">
+                <p class="p-2 col-10 col-xl-5"> Milan indumentaria es una marca argentina que acompaña la dinamica de la vida
                     de la mujer contemporanea, acercandole una amplia propuesta de prendas y accesorios
                     inspirados en las ultimas tendencias de moda.
                     Nuestra gran variedad amalgama diseño con funcionalidad y asegura un justo equilibrio
                     entre calidad y accesibilidad, permitiendo que cada mujer pueda recrear su priopio estilo
                     y potenciar lo mejor de si misma.
                 </p>
-                <iframe class="col-6" width="560" height="315" src="https://www.youtube.com/embed/1VplnxmVjao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="col-10 col-xl-6" width="560" height="315" src="https://www.youtube.com/embed/1VplnxmVjao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </article>
     </section>
