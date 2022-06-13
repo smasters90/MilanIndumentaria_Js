@@ -240,6 +240,20 @@
           transform: scale(1.1, 1.1);
 }
 
+.form--Indumentaria .boton__carrito {
+  color: #e43dc8;
+  background-color: #ebebeb;
+  border: 2px solid rgba(49, 49, 49, 0.74);
+  border-radius: 35px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.form--Indumentaria .boton__carrito:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
 .form--Indumentaria .contButton {
   right: 10px;
 }

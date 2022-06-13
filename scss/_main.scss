@@ -202,6 +202,17 @@
             transform: scale(1.1, 1.1);
         }
     }
+    .boton__carrito{
+        color: map-get($colores, rosa);
+        background-color: rgb(235, 235, 235);
+        border: 2px solid map-get($colores, negro-claro);
+        border-radius: 35px;
+        transition: 1s;
+
+        &:hover{
+            transform: scale(1.2, 1.2);
+        }
+    }
     
     .contButton{
         right: 10px;
