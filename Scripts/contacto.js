@@ -7,6 +7,15 @@ class Contacto {
     }
 }
 
+function disableScroll() {
+    document.body.classList.add("stop-scrolling");
+}
+  
+function enableScroll() {
+    document.body.classList.remove("stop-scrolling");
+}
+
+
 function handleLlenado(e){ 
     e.preventDefault();
     let nombre = document.getElementById("nombre").value;
@@ -16,11 +25,23 @@ function handleLlenado(e){
 
     let contacto = new Contacto(nombre,email,telefono,mensaje);
     contactos.push(contacto);
-    alert("FORMUALRIO CARGADO CORRECTAMENTE");    
+
+    const openModal = document.querySelector(".fotmContacto__boton");
+    const modal = document.querySelector(".modalContacto");
+    const closeModal = document.querySelector(".modal__close");
+    
+    modal.classList.add("modal--show");
+    disableScroll();
+    
+
+    closeModal.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.classList.remove("modal--show");
+        enableScroll();
+    });
 }          
 
     
-
 
 const contactos = [];
 

@@ -61,9 +61,16 @@
                 <input id="email" class="m-3 rounded-4 p-1 ps-2 col-10 col-lg-5 col-xl-4" type="email" placeholder="Email" required>
                 <input id="telefono" class="m-3 rounded-4 p-1 ps-2 col-10 col-lg-5 col-xl-4" type="tel" placeholder="Telefono" required>
                 <textarea id="mensaje" class="m-3 rounded-4 p-1 ps-2 col-10 col-lg-5 col-xl-4" name="" id="" cols="30" rows="10" placeholder="Mensaje" required></textarea>
-                <button id="btnForm" class="fotmContacto__boton col-6 col-lg-2 col-xl-2 d-flex text-decoration-none justify-content-around"  type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button href="#" id="btnForm" class="fotmContacto__boton col-6 col-lg-2 col-xl-2 d-flex text-decoration-none justify-content-around"  type="submit">
                     ENVIAR
                 </button>   
+                <section class="modalContacto">
+                    <div class="modal__container mt-5">
+                        <h2 class="modal__title">Formulario Enviado Correctamente!</h2>
+                        <p class="modal__paragraph">A la brevedad nos pondremos en contacto con vos!</p>
+                        <a href="#" class="modal__close">Cerrar</a>
+                    </div>
+                </section>
             </div>
         </form>
     </main>

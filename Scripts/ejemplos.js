@@ -272,3 +272,40 @@ function handleContador(e){
         contador.innerText = contadorValue // llenamos el input con el valor.
     }
 }
+
+
+//STORAGE/////
+//Objeto global que te permite almacenar datos de manera local en el navegador
+//2 tipos de storage: localStorage y sesionStorage
+//localStorage: variable global, los datos se almacenan en el navegador de manera indefinida. La informacion almacenada
+//se guarda en forma de "clave-valor". Definimos claves en el storage donde almacenamos valores.
+
+//En el objeto localStorage tenemos un metodo llamado setItem
+//Metodo --> localStorage.setitem(clave, valor)
+//clave = nombre para identificar el elemento
+//valor = valor/contenido del elemento
+localStorage.setItem('bienvenida', 'Hola Coder');
+localStorage.setItem('unNumero', 20);
+
+//Podemos acceder a la informacion del localStorage usando getItem. Las claves y valores de Storage se guardan en formato
+//de cadenas de caracteres
+let mensaje = localStorage.getItem('bienvenida');
+let numero = localStorage.getItem('unNumero');
+
+//sesionStorage: variable global, los datos se almacenan en el navegador hasta que el user cierra la ventana. Solo existe
+//dentro de la pestaña actual, osea, otra pestaña con la misma pagina tendra otro sesionStorage distinto.
+//Metodo --> sesionStorage.setitem(clave, valor)
+//clave = nombre para identificar el elemento
+//valor = valor/contenido del elemento
+sessionStorage.setItem('esValido', false);
+sessionStorage.setItem('seleccion', [1,2,3]);
+
+//Cabe destacar que getItem siempre devuelve un STRING del valor:
+let numeros = localStorage.getItem('seleccion'); //"1,2,3" devuelve un string de los numeros
+
+//Recorrer el storage
+for (let i = 0; i< localStorage.length; i++){ //utilizamos el metodo .key
+    let clave = localStorage.key(i);
+    console.log("Clave: " + clave);
+    console.log("Valor: " + localStorage.getItem(clave));
+}
