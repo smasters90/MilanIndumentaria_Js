@@ -1,0 +1,17 @@
+[
+    {"id":3, "nombre":"Short Lila", "precio":1299, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/shortLila.png"},
+    {"id":4, "nombre":"Mono Perla", "precio":1229, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/monoPerla.jpg"},
+    {"id":5, "nombre":"Remera Perla", "precio":2449, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/remeraPerla.jpg"},
+    {"id":6, "nombre":"Short Wood", "precio":999, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/shortWood.jpg"},
+    {"id":7, "nombre":"Short Yenny", "precio":1799, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/shorJenny.jpg"},
+    {"id":8, "nombre":"Short Money", "precio":1079, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/shortMonet.jpg"},
+    {"id":9, "nombre":"Short Guanacaste", "precio":1079, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/shortGuanacaste.jpg"},
+    {"id":10, "nombre":"Calza Indigo ", "precio":699, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/calzaIndigo.jpg"},
+    {"id":11, "nombre":"Joggin Londres", "precio":1289, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/joggingLondres.jpg"},
+    {"id":12, "nombre":"Jean Martina", "precio":2149, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/jeanMartina.jpg"},
+    {"id":13, "nombre":"Calza Hanna", "precio":999, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/calzaHanna.jpg"},
+    {"id":14, "nombre":"Jean Florence", "precio":1899, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/jeanFlorence.jpg"}
+]  
+
+
+

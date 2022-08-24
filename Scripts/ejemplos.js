@@ -1,3 +1,7 @@
+//for in --> itero objetos
+//for of --> itero arrays
+
+
 //1)
 let div = document.getElementById("app"); //Metodo en donde elijo solo 1 solo elemento por id en donde ese id es "app"
 let parrafo = document.getElementById("parrafo1");
@@ -304,8 +308,342 @@ sessionStorage.setItem('seleccion', [1,2,3]);
 let numeros = localStorage.getItem('seleccion'); //"1,2,3" devuelve un string de los numeros
 
 //Recorrer el storage
-for (let i = 0; i< localStorage.length; i++){ //utilizamos el metodo .key
-    let clave = localStorage.key(i);
+for (let i = 0; i< localStorage.length; i++){ 
+    let clave = localStorage.key(i); //utilizamos el metodo .key que recibe un parametro numerico como si el storage fuera un array
+                                    //y el metodo me devuelve el nombre de la propiedad o "clave"
     console.log("Clave: " + clave);
     console.log("Valor: " + localStorage.getItem(clave));
 }
+
+
+//Eliminar datos del storage
+localStorage.setItem('bienvenida', "Hola Seba");
+sessionStorage.setItem("esValido", true);
+localStorage.removeItem('bienvenida'); //Removemos a traves del metodo removeItem que recibe como parametro el string de la clave
+localStorage.clear(); // Removemos todo el storage con clear
+
+
+
+//Almacenar objetos en storage. Para ello usamos json
+//Json es usado para enviar y almacenar datos en aplicaciones web. Se puede usar json independientemente de Js
+//Cuando sea necesario enviar un objeto al servidor o almacenarlo en el storage, tenemos que convertir ese objeto a JSON
+//Para esto, hay 2 propiedades: stringify (acepta un objeto como parametro y devuelve la forma de texto Json)
+// Y parse (recibe un texto JSON como parametro y devuelve el objeto JS correspondiente)
+
+//Stringify: propiedad en donde transformamos un objeto JS a un string JSON
+const producto2 = { id: 2, producto: "Arroz"};
+const enJSON = JSON.stringify(producto2);
+
+console.log(enJSON); // '{ "id": 2, "producto": "Arroz"}' es un string en donde las propiedades van entre "" como string
+console.log(typeof producto2); //object
+console.log(typeof enJSON); //string
+
+localStorage.setItem('producto2', enJSON);
+
+//Parse hace lo contrario. Propiedad donde recibimos un JSON y devolvemos un objeto JS
+let producto = localStorage.getItem('producto2'); //traemos el string (objeto) de tipo JSON
+let productoJS = JSON.parse(producto); //ese JSON guardado lo parseamos y lo convertimos en objeto para guardarlo en variable
+
+//Ejemplo:
+const productos = [
+    {id: 1, producto: "arroz", precio: 100},
+    {id: 2, producto: "fideos", precio: 120},
+    {id: 3, producto: "leche", precio: 200},
+] //tenemos un array de objetos
+
+localStorage.setItem('listaDeProductos', JSON.stringify(productos)); //para guardar el array de objetos en el storage
+//usamos set item y como valor pasamos el array pero como tipo JSON
+JSON.parse(localStorage.getItem('listaDeProductos')); //Ahora para obtener ese array lo paseamos
+
+//RECUPERAR DATOS: usamos el storage para recuperar datos relacionados a la ultima navegacion del usuario
+//para esto, pensamos en inicializar las variables de la app consultando el Storage en el momento del inicio
+let usuario;
+let usuarioEnLs = localStorage.getItem("usuario") //guardamos el "valor" de la "clave" usuario
+
+if(usuarioEnLs){ //si hay algo almacenado en usuarioEnLs (osea true) (si no hay nada almacenado es null, osea, false)
+    usuario = usuarioEnLs; //si hay algo, "inicializamos la variable" usuario para usarla cuando recargamos la sesion.
+} else {
+    usuario = prompt("Ingrese su nombre de usuario"); //Sino hay nada, le pedimos al cliente que cargue el user
+    localStorage.setItem("usuario", usuario); //entonces guardamos ese nombre de usuario en el Storage para futura sesion
+}
+
+//otro ej:
+let carrito = [];
+let carritoEnLs = JSON.stringify(localStorage.getItem("carrito"));
+
+//Inicializo mi app con carrito como array vacio o con el registros que haya quedado en el LocalStorage
+
+if(carritoEnLs){
+    carrito = carritoEnLs;
+}
+
+//funcion que rederizaria mi carrito
+renderCarrito(carrito);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//OPERADOR TERNARIO SINTAXIS:
+// condicion ? caso1 : caso2
+//La condicion resuelve true o false. En caso1 se escribe la instruccion a ejecutar si la condicion es verdadera y
+//en caso 2 si es falsa.
+temperatura = 30;
+temperatura > 29 ? alert("Dia caluroso") : alert ("Dia agradable");
+//El operador ternario ofrece un return implicito para cada caso. Ej:
+let usuario2 ={
+    nombre: "seba",
+    edad: 32,
+};
+//Realizamos el "if"
+let permiso = (usuario.edad>18) ? true : false;
+//Mostramos el mensaje
+permiso ? alert("puede comprar cerveza") : alert("no puede"); // si permiso es verdadero...tal cosa, sino... tal otra
+
+//&& se usa cuando solo usamos "if" sin los else. Ej:
+let carrito2 [];
+if (carrito.length==0){
+    console.log("el carrito esta vacio");
+}
+
+carrito2.length==0 && console.log("el carrito esta vacio"); //Basicamente si la primera parte es verdadera, se ejecuta la 2da
+//En caso de que la condicion no se cumpla, siempre devuelve false.
+//&& tambien tiene un return implicito. Por lo que ese resultado lo podemos guardar en una variable.
+
+// || devue la condicion verdadera y si ambas son falsas devuelve la utima condicion 
+
+//Si intentaramos acceder a un objeto que no existe naturalmente tendriamos un error. Pero si usamos el operador "?"
+//sobre la referencia a un objeto para condicionar su acceso, podemo tener un mejor control:
+
+let usuario3 = null;
+console.log(usuario3.nombre3) //da error
+
+console.log(usuario3?.nombre) //da undefined. Con esto de le decimos a js q busque la variable "nombre" en el objeto
+//solo si el objeto "usuario" existe
+
+let usuario4 = {
+    nombre: 'seba',
+    edad: 32,
+    curso : {
+        javaSript: "aprobado"
+    }
+}
+let existe =usuario4?.curos?.javaScript || "la propiedad no exite" //aca da true por ende devuelve "aprobado"
+console.log(existe)
+
+//Desestructuracion: en vez de acceder a las propiedades de un objeto con "let variable = objeto.propiedad "
+let {'propiedades'} = objeto
+
+let usuario5 = {
+    nombre: 'seba',
+    edad: 32,
+    curso : {
+        javaSript: "aprobado",
+        html: "aprobado",
+    }
+}
+
+let {nombre, edad} = usuario5;
+console.log(nombre) //seba
+
+//Si quisiera descontracturar un objeto dentro de un objeto:
+let { curso:{javaScript}} = usuario5
+
+//Tambien podemos usarla con funciones:
+let usuarioo = {
+    nombre: 'seba',
+    edad: 32,
+    curso : {
+        javaSript: "aprobado",
+        html: "aprobado",
+    }
+}
+
+function mostrarPorpiedades({nombre, curso:{html}}){ // aca le paso un objeto. No hace falta poner el = pq cuando llame a la funcion le voy a pasar ese objeto
+    console.log(nombre, curso);
+}
+mostrarPropiedades(usuarioo);
+
+
+//Podemos desestructurar arrays en donde usamos [] en vez dew {}
+//La diferencia es que aca, los nombres entre las [] no tienen que coincidir con el valor del array
+
+let nombres = ["seba", "tati"];
+let [a,b]; //si damos console.log aca muestra tati y seba, y ponemos como variable lo q queremos
+
+
+//SPREAD DE ARRAYS
+let nombre = ["seba", "tati"];
+console.log(nombre) //me muestra la estructura del array
+console.log(...nombre) // me muestra todo el interior del array: "seba" "tati"
+
+//Podemos concatenar 2 array
+let numeros1 = [1,2,3];
+let unidos = [...nombre, ...numero1];//ahora unidos muestra "seba" "tati" 1 2 3
+
+//tambien podemos hacer spread dentro de un objeto
+let nombreObj = {
+    ...nombre
+}
+console.log(nombreObj) // ccomo resultado:
+//0; "seba"
+//1: "tati"
+// usa el indice del array como nombre de la propiedad en el objeto
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//LIBRERIAS TOASTIFY es una libreria q nos permite tirar un mensaje push
+Toastify({ //recibe por parametro un objeto
+    text: 'Mensaje de la notificacion',
+    duration: 300, //ms
+    gravity: 'bottom', // te indica donde va a salir en el eje y
+    position: 'left', //te indica si sale en el borde derecho o izquierdo
+    style : {  //objeto que nos permite darle estilo css la notificacion
+        background: red,
+        textAlign: clearInterval, //en caso de las caracteristicas que en css lleva "-" se remplaza por camelCase
+    },
+    className: 'contenedorPrincipal', // tambien, en vez de usar style, puedo cargar el estilo css a traves de las clases
+    destination: 'www.google.com', //al hacer click sobre el mensaje, te redirecciona a una url q toma de valor
+    newWindow: true, // recibe un bolean para decir que ese destination se abra en una pagina nueva o no
+    stopOnFocus: true, // lo q hace es resetear el "duration" cuando hacemos "hover" sobre la notificacion
+    //en otras palabras, si dejamos el mouse fuera de la notificacion, despues de 3000ms desaparece el mje a menos q posicionemos el mouse sobre el mje
+    // y se resetea ese timer.
+}).showToast(); // luego llamo al metodo showToast para mostrar la notificacion. Es un metodo de la libreria (son funciones)
+
+
+//En este caso podemos usar la propiedad onClick para definir una funcion del callback que se ejecuta al clickear el toast
+btn.addEventListener('click', () =>{
+    Toastify({ 
+        text: 'Mensaje de la notificacion',
+        duration: 300, //ms
+        onClick: () => {
+            Toastify({
+                text: 'clickeaste un toas',
+                duration: 200
+            }).showToast()
+        }
+    }).showToast();
+})
+//al clickear en un mensaje emergente, sale otro mensaje emergente
+
+
+//LUXON permite trabajar con fechas y horas de una manera mas sencilla que con Date. Se puede parsear, formatear, sumar y restar fechas, etc
+//La clase principal del objeto global luxon, es DateTime. Referenciamos esa clase en una variable:
+const DateTime = luxon.DateTime;
+//Un DateTime representa un milisegundo especifico en el tiempo
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//ASYNC: usamos la funcion setTimeout para realizar acciones asincronicas
+setTimeout(()=>{
+    console.log("Proceso asincronico");
+}, 3000) // se le pasa por parametro una funcion y un tiempo en ms. La funcion se ejecuta luego de que transcurrre ese tiempo
+//el tiempo esta en ms
+
+//ej:
+let btn = document.querySelector('#boton') //selecciono un btn
+let popup = document.querySelector('#popup-mensaje')
+
+btn.addEventListener('click', ()=>{
+    popup.classList.add('popup-active');
+
+    setTimeout(()=>{
+        popup.classList.remove('popup-active');
+    }, 2500)
+})
+// le damos un estilo a ese popup que por ej nos pinte de negro el boton q agregamos y a los 2,5 seg le saque el negro
+
+//setInterval es un metodo donde se le pasa por parametro una funcion que se va a repetir indefinidamente entre un
+//lapso de tiempo definido x el 2do parametro
+
+setInterval(()=>{
+    console.log('tic tac');
+}, 1500); // tic tac se va a imprimir cada 1,5 seg
+
+
+//PROMISE
+//Objeto global o clase que representa a un evento futuro. 
+//Se crea una promise a traves de su constructor que recibe por parametro 2 funciones (resolve y reject)
+new Promise( (resolve, reject) =>{
+    //cuerpo de la promesa
+})
+
+//En principio una promesa devuelve el valor de pending
+
+let eventoFuturo = (value) => {
+    return new Promise ((resolve, reject) =>{
+        if (value ==true){
+            resolve ('promesa resuelta')
+        } else {
+            reject ('promesa no resuelta')
+        }
+    })
+}
+
+console.log(eventoFuturo(true))
+console.log(eventoFuturo(false))
+
+
+//then y catch
+let eventoFuturo2 = (value) => {
+    return new Promise ((resolve, reject) =>{
+        setTimeout(()=>{
+            value? resolve('promesa resuelta') : reject('promesa no resuelta');
+        }, 2000);
+    })
+}
+
+eventoFuturo2(true)
+    .then( (response)=>{
+        console.log(response) //promesa resuelta
+    })
+//el then se usa para capturar la respuesta en caso de que devuelva resolver
+
+eventoFuturo2(false)
+    .catch( (error)=>{ // response es el valor con el q resuelve la promesa, en este caso: "promesa resuelta"
+        console.log(error) //promesa no resuelta
+    })   
+
+//Tambien tenemos finally que se ejecuta si o si sin importar lo que devuelva la promesa
+
+eventoFuturo2(true)
+    .then( (response)=>{
+        console.log(response) 
+    })
+    .catch( (error)=>{
+        console.log(error) 
+    })   
+    .finally( () => {
+        console.log('fin del proceso')
+    } )
+    //Promesa resuelta
+    //Fin del proceso
+
+
+
+//EJ DE TODO JUNTO:
+ 
+let bd = [
+    {id: 1, nombre: 'producto1', precio: 1550},
+    {id: 2, nombre: 'producto2', precio: 2550},
+    {id: 3, nombre: 'producto3', precio: 3550},
+]
+
+let pedirProductos = ()=> { //funcion para pedir productos de la base de datos
+    return new Promise( ()=>{ //promise que en 3 seg devuelva con exito la bd
+        setTimeout( ()=>{
+            resolve(bd)
+        }, 3000)
+    })
+}
+
+let productoss = []; //array vacio
+
+let renderizarProductos = (arr) =>{
+    console.log('algoritmo q renderiza los productos') //vamos a renderizar los productos en el dom con el array vacio 
+}                                                      // donde va a estar cargado mis productos
+
+pedirProductos() //llamamos a la funcion
+.then((res)=>{ //si trae los productos de la base de datos entonces:
+    productoss = res //el res: va a ser la bd (linea 636) lo guardamos en el array vacio
+    renderizarProductos(productoss) //luego mandamos el array lleno a la funcion
+})

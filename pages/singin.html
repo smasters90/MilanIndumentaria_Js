@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../scss/style.css">
@@ -48,19 +50,21 @@
         <div class="offcanvas offcanvas-end" tabindex="-1" id="registro" aria-labelledby="offcanvasLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasLabel">REGISTRATE</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button id="offcanvas__cerrar" type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body d-flex flex-column align-items-center">
-                <form class="form d-flex flex-column align-items-center justify-content-evenly gap-1 border border-2 border-dark p-2 m-2 col-12" action="login.html" method="get" enctype="application/x-www-form-urlencoded">
+                <form id ="formSing" class="form d-flex flex-column align-items-center justify-content-evenly gap-1 border border-2 border-dark p-2 m-2 col-12" action="login.html" method="get" enctype="application/x-www-form-urlencoded">
                     <div class="form__contInput d-flex flex-column align-items-center col-12 justify-content-evenly gap-1">
-                        <input class="col-8"  type="text" name="nombre" placeholder="Nombre" required>
-                        <input class="col-8"  type="text" name="apellido" placeholder="Apellido" required>
-                        <input class="col-8" type="text" name="nu" placeholder="Nombre de usuario" required>
-                        <input class="col-8" type="email" name="em" placeholder="E-mail" required> 
-                        <input class="col-8" type="password" name="pass" placeholder="Contraseña" required>
-                        <input class="col-8" type="password" name="pass2" placeholder="Repetir Contraseña" required>
+                        <input id="nombre" class="col-8"  type="text" name="nombre" placeholder="Nombre" required>
+                        <input id="apellido" class="col-8"  type="text" name="apellido" placeholder="Apellido" required>
+                        <input id="nombreUsuario" class="col-8" type="text" name="nu" placeholder="Nombre de usuario" required>
+                        <p id="parrafoNombreUsuario" class="d-none py-0 mb-0" style="color:red;"><small> Este usuario ya existe </small></p>
+                        <input id="correo" class="col-8" type="email" name="em" placeholder="E-mail" required> 
+                        <p id="parrafoCorreo" class="d-none py-0 mb-0" style="color:red;"><small> Este correo ya fue usado </small></p>
+                        <input id="pass" class="col-8" type="password" name="pass" placeholder="Contraseña" required>
+                        <input id="repPass" class="col-8" type="password" name="pass2" placeholder="Repetir Contraseña" required>
                     </div>
-                    <select class="col-6" name="sex" required>
+                    <select id="sexo" class="col-6" name="sex" required>
                         <option disabled selected value="">Seleccione el Sexo</option>
                         <option>Hombre</option>
                         <option>Mujer</option>
@@ -75,42 +79,27 @@
                         <input type="checkbox" required> <label class="form__checkbox--texto"> Acepto Terminos y Condiciones</label>
                     </div>
                     <div class="form__botones d-flex flex-row justify-content-around col-8">
-                        <input class="d-inline p-1 my-1 border rounded-3 fw-bold" type="button" value="Registrar" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <input class="d-inline p-1 my-1 border rounded-3 fw-bold" type="reset" value="Cancelar" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <button class="botones__registro d-inline p-1 my-1 border rounded-3 fw-bold" type="submit"> REGISTRAR </button>
+                        <button class="botones__registro d-inline p-1 my-1 border rounded-3 fw-bold" type="reset" data-bs-dismiss="offcanvas" aria-label="Close"> CANCELAR </button>
                     </div>
+
                 </form> 
             </div>
         </div>
         <h1 class="d-block p-2"> INICIAR SESION</h1>
-        <form class="formSingIn form d-flex flex-column align-items-center justify-content-evenly gap-3 border border-2 border-dark p-4 m-1 col-11 col-xl-5 col-md-8 mb-xl-5">
+        <form id ="formLog" class="formSingIn form d-flex flex-column align-items-center justify-content-evenly gap-3 border border-2 border-dark p-4 m-1 col-11 col-xl-5 col-md-8 mb-xl-5">
             <div class="form__contInput d-flex flex-column align-items-center col-12 justify-content-evenly gap-3 p-2 my-2">
-                <input class="col-10 col-md-5" type="text" placeholder="Nombre de Usuario" required>
-                <input class="col-10 col-md-5 " type="password" placeholder="Password"required>
+                <input id = "usuario" class="col-10 col-md-5" type="text" placeholder="Nombre de Usuario" name="us" required>
+                <input id = "contrasena" class="col-10 col-md-5 " type="password" placeholder="Password" name="pa" required>
             </div>
             <div class="form__checkbox">
                 <input type="checkbox"> Recodar contraseña
             </div>
             <div class="form__botones d-flex flex-row justify-content-around col-8 col-md-5 col-xl-5">
-                <a class="col-3 text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <input class="botones__log d-inline p-1 my-1  rounded-3" type="submit" value="LOG IN">
-                </a> 
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">PAGINA EN CONSTRUCCION</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                MILAN INDUMENTARIA, TODOS LOS DERECHOS RESERVADOS
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="botones__log d-inline rounded-3 m-3 p-1 my-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#registro" aria-controls="registro">SING IN</button>
+                <button class=" botones__log  m-3 d-inline p-1 m-lg-2 my-1 rounded-3" type="submit">
+                    LOG IN
+                </button> 
+                <button class="botones__log d-inline rounded-3 m-3 p-1 m-lg-2 my-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#registro" aria-controls="registro">SING IN</button>
             </div>
         </form>
     </main>
@@ -124,7 +113,10 @@
          </div>  
     </footer>
     
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.26/dist/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-   
+    <script src="../Scripts/singin.js"></script>
+    
 </body>
 </html>

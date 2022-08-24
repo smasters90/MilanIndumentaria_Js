@@ -7,6 +7,7 @@ class Contacto {
     }
 }
 
+
 function disableScroll() {
     document.body.classList.add("stop-scrolling");
 }
@@ -25,28 +26,29 @@ function handleLlenado(e){
 
     let contacto = new Contacto(nombre,email,telefono,mensaje);
     contactos.push(contacto);
+    contactosLs = contactos.map(contacto => contacto ={nombre: contacto.nombre, email: contacto.email, telefono: contacto.telefono, mensaje: contacto.mensaje })
+    localStorage.setItem('datosContacto', JSON.stringify(contactosLs));
 
-    const openModal = document.querySelector(".fotmContacto__boton");
-    const modal = document.querySelector(".modalContacto");
-    const closeModal = document.querySelector(".modal__close");
-    
-    modal.classList.add("modal--show");
-    disableScroll();
-    
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Formulario Enviado Correctamente!',
+        text: 'A la brevedad nos pondremos en contacto',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      
 
-    closeModal.addEventListener("click", (e) => {
-        e.preventDefault();
-        modal.classList.remove("modal--show");
-        enableScroll();
-    });
 }          
 
     
 
 const contactos = [];
+let contactosLs = [];
 
 let formulario = document.getElementById("formulario");
 formulario.addEventListener('submit', handleLlenado);
+
 
 
 

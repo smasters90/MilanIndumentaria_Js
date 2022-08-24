@@ -76,24 +76,9 @@
 }
 
 /*INDEX*/
-.btn__carrito {
-  margin-left: 85%;
-  position: fixed;
-  width: 12%;
-}
-
-@media all and (min-width: 768px) {
-  .btn__carrito {
-    margin-left: 92%;
-    width: 7%;
-  }
-}
-
-@media all and (min-width: 1200px) {
-  .btn__carrito {
-    margin-left: 93%;
-    width: 5%;
-  }
+.btn__carrito img {
+  width: 5%;
+  background-color: blue;
 }
 
 .cont__fondo {
@@ -339,14 +324,6 @@
   height: 90%;
   top: 2.5%;
   left: 12.5%;
-}
-
-.img--carrito {
-  height: 10%;
-}
-
-.cont__prod {
-  height: 50%;
 }
 
 /*SING IN*/
