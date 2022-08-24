@@ -1,5 +1,5 @@
 [
-    {"id":3, "nombre":"Short Lila", "precio":1299, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/shortLila.png"},
+    {"id":3, "nombre":"Short Lila", "precio":1299, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/shortLila.jpg"},
     {"id":4, "nombre":"Mono Perla", "precio":1229, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/monoPerla.jpg"},
     {"id":5, "nombre":"Remera Perla", "precio":2449, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/remeraPerla.jpg"},
     {"id":6, "nombre":"Short Wood", "precio":999, "color":"", "talle":"", "categoria":"niña", "cantidad":0, "imagen":"../img/shortWood.jpg"},
