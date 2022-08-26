@@ -160,11 +160,16 @@
 }
 .cont__modal .modalContenedor {
   margin-top: 10%;
-  width: 30%;
+  width: 60%;
   height: 40%;
   background-color: #fff;
   border-radius: 10px;
   padding: 1rem 2rem;
+}
+@media all and (min-width: 768px) {
+  .cont__modal .modalContenedor {
+    width: 40%;
+  }
 }
 .cont__modal .botonModal {
   width: 175px;
@@ -182,38 +187,6 @@
   overflow: hidden;
 }
 
-/*.offcanvas{
-    font-family: 'Sansita', sans-serif;
-    color: map-get($colores, negro-claro);
-    .offcanvas-title{
-        color: map-get($colores, rosa);
-    }
-    .offcanvas-body{
-        img{
-            margin:30px
-        }
-        .cont__cantidad{
-            label{
-                margin-right: 10px;
-            }
-            input{
-                width: 40px;
-            }
-        }
-        .boton__carrito{
-            color: map-get($colores, rosa);
-            background-color: rgb(235, 235, 235);
-            border: 2px solid map-get($colores, negro-claro);
-            border-radius: 35px;
-            transition: 1s;
-
-            &:hover{
-                transform: scale(1.2, 1.2);
-            }
-        }
-    }
-}
-*/
 .cont__btn button {
   border-radius: 20%;
   transition: 0.3s;
@@ -224,6 +197,10 @@
 .cont__btn button span {
   font-size: 30px;
   color: rgb(90, 160, 96);
+}
+
+.cont__btn--lila {
+  align-items: top;
 }
 
 /*MUJER*/
@@ -258,16 +235,6 @@
 .form--Indumentaria .formIndumentaria__agregar:hover {
   transform: scale(1.1, 1.1);
 }
-.form--Indumentaria .boton__carrito {
-  color: rgb(228, 61, 200);
-  background-color: rgb(235, 235, 235);
-  border: 2px solid rgba(49, 49, 49, 0.74);
-  border-radius: 35px;
-  transition: 1s;
-}
-.form--Indumentaria .boton__carrito:hover {
-  transform: scale(1.2, 1.2);
-}
 .form--Indumentaria .contButton {
   right: 10px;
 }
@@ -294,6 +261,20 @@
 
 .cont__producto {
   height: 50%;
+}
+
+/* CARRITO */
+.boton__carrito {
+  font-size: 16px;
+  min-width: 140px;
+  font-weight: 600;
+  padding: 12px 28px;
+  color: #fff;
+  background: #3483fa;
+  transition: 1s;
+}
+.boton__carrito:hover {
+  transform: scale(1.2, 1.2);
 }
 
 /*SING IN*/

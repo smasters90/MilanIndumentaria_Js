@@ -1,7 +1,7 @@
-function mostrarModal(product){
+function mostrarModal(){
     
     modal.innerHTML = `
-    <div class="modalContenedor d-flex flex-column justify-content-around align-items-center mx-auto">
+    <div class="modalContenedor d-flex flex-column justify-content-around align-items-center mx-auto col-12">
         <div class="modalHeader">
             <h2 class="text-center"> Elije el color:</h2>
         </div>
@@ -16,7 +16,7 @@ function mostrarModal(product){
             <br>
             <div>
                 <label for="cantidad" class="cantidad__nombre mx-2">Cantidad</label>
-                <input id="cantidadNinas" type="number" class="cantidad__numero col-2  my-2" value=0 required>
+                <input id="cantidadNinas" type="number" class="cantidad__numero text-center col-2  my-2 col-2" value=0 required>
             </div>
         </div>
         <button class="botonModal">Agregar</button>
@@ -79,7 +79,7 @@ fetch('../Scripts/productos.json')
             btnElegido = btn.getAttribute('id');
             for(let product of arrayProd){
                 if(product.id == btnElegido){
-                    mostrarModal(product);
+                    mostrarModal();
                     agregar(product);
                 }
             }

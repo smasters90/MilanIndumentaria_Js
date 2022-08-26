@@ -152,11 +152,14 @@
         }
         .modalContenedor {
             margin-top: 10%;
-            width: 30%;
+            width: 60%;
             height: 40%;
             background-color: #fff;
             border-radius: 10px;
-            padding: 1rem 2rem
+            padding: 1rem 2rem;
+            @media all and (min-width:768px) {
+                width: 40%
+            } 
         }
         .botonModal{
             width: 175px;
@@ -175,39 +178,6 @@
     overflow: hidden;
 }
 
-/*.offcanvas{
-    font-family: 'Sansita', sans-serif;
-    color: map-get($colores, negro-claro);
-    .offcanvas-title{
-        color: map-get($colores, rosa);
-    }
-    .offcanvas-body{
-        img{
-            margin:30px
-        }
-        .cont__cantidad{
-            label{
-                margin-right: 10px;
-            }
-            input{
-                width: 40px;
-            }
-        }
-        .boton__carrito{
-            color: map-get($colores, rosa);
-            background-color: rgb(235, 235, 235);
-            border: 2px solid map-get($colores, negro-claro);
-            border-radius: 35px;
-            transition: 1s;
-
-            &:hover{
-                transform: scale(1.2, 1.2);
-            }
-        }
-    }
-}
-*/
-
 .cont__btn{
     button{
         border-radius: 20%;
@@ -221,6 +191,12 @@
         }
     }
 }
+
+.cont__btn--lila{
+    align-items: top;
+
+}
+
 
 
   /*MUJER*/
@@ -258,18 +234,7 @@
             transform: scale(1.1, 1.1);
         }
     }
-    .boton__carrito{
-        color: map-get($colores, rosa);
-        background-color: rgb(235, 235, 235);
-        border: 2px solid map-get($colores, negro-claro);
-        border-radius: 35px;
-        transition: 1s;
 
-        &:hover{
-            transform: scale(1.2, 1.2);
-        }
-    }
-    
     .contButton{
         right: 10px;
         .button__shop{
@@ -300,6 +265,24 @@
 .cont__producto{
     height: 50%;
 }
+
+
+/* CARRITO */
+.boton__carrito{
+    font-size: 16px;
+    min-width: 140px;
+    font-weight: 600;
+    padding: 12px 28px;
+    color: #fff;
+    background: #3483fa;
+    
+    transition: 1s;
+
+    &:hover{
+        transform: scale(1.2, 1.2);
+    }
+}
+
 
 /*SING IN*/
 

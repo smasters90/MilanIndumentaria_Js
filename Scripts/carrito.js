@@ -31,7 +31,6 @@ botonCarrito.addEventListener('click', ()=>{
     limpiarCarrito();
     for(prod of carrito){
         agregarCarrito(prod);
-    }
-    
+    }  
 });
 
