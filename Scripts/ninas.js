@@ -32,7 +32,6 @@ function agregar(product){
         e.preventDefault();
         selectColor = document.getElementById('color').value;
         selectCant = parseInt(document.getElementById('cantidadNinas').value);
-        console.log(selectCant)
         
         if(selectColor == "" || selectCant == 0){
             Swal.fire({
