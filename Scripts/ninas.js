@@ -93,3 +93,4 @@ let selectColor;
 let selectCant;
 
 localStorage.getItem("datosProductos") ? carrito = JSON.parse(localStorage.getItem("datosProductos")) : carrito = [];
+

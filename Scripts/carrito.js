@@ -12,9 +12,40 @@ function agregarCarrito(prod){
                 <p> Cantidad: ${prod.cantidad} </p>
                 <p> <strong> Total $: ${prod.precio * prod.cantidad} </strong></p>
             </div>
+            <div class="cont__boton d-flex justify-content-center">
+                <button id="${prod.id}" class="boton__eliminar--Prod m-3" type="button">Eliminar</button>
+            </div>
             <br>
         </div>
     `
+
+    let arrayBtnEliminarProd = document.querySelectorAll('.boton__eliminar--Prod');
+    let btnSelect;
+    let indice;
+
+    for(let btn of arrayBtnEliminarProd){
+        btn.addEventListener('click',() =>{
+        btnSelect = btn.getAttribute('id');
+
+        for(let product of carrito){
+            if(product.id == btnSelect){
+                indice = carrito.findIndex(productos => productos.id == btnSelect);
+                carrito.splice(indice,1);
+                localStorage.setItem('datosProductos', JSON.stringify(carrito));
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: ` SU PRODUCTO FUE ELIMINADO`,
+                    showConfirmButton: false,
+                    timer: 1000,
+                });
+                setTimeout(()=>{
+                    location.reload();
+                }, 750); 
+            }
+        }
+        });
+    }
     botonCompra.classList.remove("d-none");
 }
 
@@ -40,40 +71,54 @@ botonCarrito.addEventListener('click', ()=>{
 botonCompra.addEventListener('click', ()=>{
     limpiarCarrito();
     botonCompra.classList.add("d-none");
-    contProduct.innerHTML += `
-        <form class = "formulario__pago">
-            <select class = "m-3 rounded-4" name="cuotas" id="" required>
-                <option value="" selected disabled>--Seleccione Cantidad de Cuotas--</option>
-                <option value=""> 3 cuotas de $ ${((subTotal/3)).toFixed(2)} pesos </option>
-                <option value=""> 6 cuotas de $ ${((subTotal/6)).toFixed(2)} pesos </option>
-                <option value=""> 12 cuotas de $ ${((subTotal/12)).toFixed(2)} pesos </option>
-            </select>
-            <input class = "m-3 rounded-4 p-1 ps-2 col-10 col-lg-8 col-xl-10" placeholder = "Numero de tarjeta"  required> </input>
-            <input class = "m-3 rounded-4 p-1 ps-2 col-10 col-lg-2 col-xl-4" placeholder = "mes" type = "number" required> </input>
-            <input class = "m-3 rounded-4 p-1 ps-2 col-10 col-lg-2 col-xl-4" placeholder = "año" type = "number" required> </input>
-            <input class = "m-3 rounded-4 p-1 ps-2 col-10 col-lg-8 col-xl-10" placeholder = "Nombre del Titular" type = "text" required></input>
-            <input class = "m-3 rounded-4 p-1 ps-2 col-10 col-lg-8 col-xl-10" placeholder = "DNI del Titular"  required></input>
-
-            <div class="cont__boton d-flex justify-content-center">
-                <button id="boton__pago" class="boton__carrito m-3" type="submit">PAGAR</button>
-            </div>
-        </form>
-    `
-    
-  
-    let formPago = document.querySelector('.formulario__pago');
-    formPago.addEventListener('submit', (e) => {
-        e.preventDefault();
+    if(carrito.length == 0){
         Swal.fire({
             position: 'top-center',
-            icon: 'success',
-            title: ` SU COMPRA FUE CONFIRMADA`,
-            text: 'Le enviaremos un correo electronico para poder seguir el pedido',
+            icon: 'error',
+            title: ` SU CARRITO ESTA VACIO`,
             showConfirmButton: false,
-            timer: 3000,
+            timer: 1000,
           });
           setTimeout(()=>{
             location.reload();
-          }, 2000);
-    })
+        }, 750); 
+    } else {
+        contProduct.innerHTML += `
+            <form class = "formulario__pago">
+                <select class = "m-3 rounded-4" name="cuotas" id="" required>
+                    <option value="" selected disabled>--Seleccione Cantidad de Cuotas--</option>
+                    <option value=""> 3 cuotas de $ ${((subTotal/3)).toFixed(2)} pesos </option>
+                    <option value=""> 6 cuotas de $ ${((subTotal/6)).toFixed(2)} pesos </option>
+                    <option value=""> 12 cuotas de $ ${((subTotal/12)).toFixed(2)} pesos </option>
+                </select>
+                <input class = "m-3 rounded-4 p-1 ps-2 col-10 col-lg-8 col-xl-10" placeholder = "Numero de tarjeta"  required> </input>
+                <input class = "m-3 rounded-4 p-1 ps-2 col-10 col-lg-2 col-xl-4" placeholder = "mes" type = "number" required> </input>
+                <input class = "m-3 rounded-4 p-1 ps-2 col-10 col-lg-2 col-xl-4" placeholder = "año" type = "number" required> </input>
+                <input class = "m-3 rounded-4 p-1 ps-2 col-10 col-lg-8 col-xl-10" placeholder = "Nombre del Titular" type = "text" required></input>
+                <input class = "m-3 rounded-4 p-1 ps-2 col-10 col-lg-8 col-xl-10" placeholder = "DNI del Titular"  required></input>
+
+                <div class="cont__boton d-flex justify-content-center">
+                    <button id="boton__pago" class="boton__carrito m-3" type="submit">PAGAR</button>
+                </div>
+            </form>
+        `
+        let formPago = document.querySelector('.formulario__pago');
+        formPago.addEventListener('submit', (e) => {
+            e.preventDefault();
+            limpiarCarrito();
+            carrito = [];
+            localStorage.setItem('datosProductos', JSON.stringify(carrito));
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: ` SU COMPRA FUE CONFIRMADA`,
+                text: 'Le enviaremos un correo electronico para poder seguir el pedido',
+                showConfirmButton: false,
+                timer: 3000,
+            });
+            setTimeout(()=>{
+                location.reload();
+            }, 2000);      
+        })
+    }   
 });

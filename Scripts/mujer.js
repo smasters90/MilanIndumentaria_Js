@@ -109,7 +109,6 @@ function agregarTapado(){
         cant.value = 0;
         talles = "";
     }
-    console.log(carrito)
 }
 
 
